@@ -170,15 +170,28 @@ Lastly, save the generated DESIGN.md in 'my-awesome-app' folder.
 ```
 
 ### 6. **Follow the Complete Workflow**
+
+**Two-Command Development Process:**
+
 ```mermaid
-graph LR
-    A[Choose PRP Template] --> B["/generate_design command"]
-    B --> C[AI Generates DESIGN.md]
-    C --> D[Review & Approve Design]
-    D --> E[Implement with CLAUDE.md]
-    E --> F[Quality Gates]
-    F --> G[Working Product]
+graph TD
+    A["📋 Choose PRP Template<br/>(Enterprise or Slim)"] --> B["📁 Setup Project Folder<br/>mkdir my-project && cp framework/* ."]
+    B --> C["🔧 /generate_design<br/>Creates [PRODUCT_NAME]_DESIGN.md"]
+    C --> D["👥 Review & Approve<br/>Technical Architecture"]
+    D --> E["🚀 /execute_project<br/>Implements Complete Product"]
+    E --> F["✅ Quality Gates<br/>Tests, Lint, Build"]
+    F --> G["🎉 Working Product<br/>Production Ready"]
+    
+    style A fill:#e3f2fd
+    style C fill:#f3e5f5
+    style E fill:#e8f5e8
+    style G fill:#fff3e0
 ```
+
+**Key Benefits:**
+- **Two Commands**: Simple `/generate_design` → `/execute_project` workflow
+- **Three Documents**: PRP → DESIGN → Implementation using CLAUDE.md methodology
+- **Production Ready**: Complete testing, documentation, and deployment preparation
 
 ## 📁 Repository Structure
 
@@ -187,8 +200,13 @@ context-engineering/                 # Clone this repository
 ├── README.md                    # This overview and quick start guide
 ├── INTRO.md                     # Executive summary for presentations
 ├── LICENSE                      # MIT License
-├── install.sh                  # Simple installer for generate_design command
+├── install.sh                  # Simple installer for framework commands
+├── .gitignore                  # Git ignore patterns
 ├── .claude/commands/           # Claude CLI command definitions
+│   ├── generate_design.md      # Architecture generation command
+│   └── execute_project.md      # Project implementation command
+├── docs/                       # Framework documentation
+│   └── DESIGN_DECISIONS.md     # Architectural decisions and analysis
 ├── framework/                  # Templates to copy to your projects
 │   ├── PRODUCT_PRP.md          # Enterprise template for complex projects
 │   ├── PRODUCT_PRP_SLIM.md     # Slim template for simple apps & quick builds
