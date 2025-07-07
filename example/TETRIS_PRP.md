@@ -186,6 +186,8 @@ I have created a PRODUCT_PRP.md file with my project requirements and I'm using 
 10. Technical diagrams (Mermaid diagrams when helpful)
 
 Please ensure the DESIGN.md follows the architecture patterns and quality standards defined in CLAUDE.md, and fully addresses all requirements specified in PRODUCT_PRP.md.
+
+Lastly, save the generated file as 'TETRIS_GAME_DESIGN.md' in the current directory (./example/).
 ```
 
 3. **Review the generated `DESIGN.md`** for Architecture & Implementation (Technical Design) ensuring it includes:
@@ -213,17 +215,30 @@ Please ensure the DESIGN.md follows the architecture patterns and quality standa
 
 ## Context Engineering Workflow
 
+**Complete Development Process for Tetris Game:**
+
 ```mermaid
-graph LR
-    A[TETRIS_PRP.md] --> B["/generate_design ./example/TETRIS_PRP.md"]
-    B --> C[AI Generates DESIGN.md]
-    C --> D[Review & Approve Design]
-    D --> E[Implement with CLAUDE.md]
-    E --> F[Quality Gates]
-    F --> G[Working Product]
-    G --> H[Documentation]
-    H --> I[Deployment Ready]
+graph TD
+    A["📋 TETRIS_PRP.md<br/>(Product Requirements)"] --> B["🔧 /generate_design<br/>./example/TETRIS_PRP.md"]
+    B --> C["📐 AI Generates<br/>TETRIS_GAME_DESIGN.md"]
+    C --> D["👥 Review & Approve<br/>Technical Architecture"]
+    D --> E["🚀 /execute_project<br/>./tetris-game"]
+    E --> F["⚙️ Implementation with<br/>CLAUDE.md Standards"]
+    F --> G["✅ Quality Gates<br/>Tests, Lint, Build"]
+    G --> H["📚 Documentation<br/>& Code Comments"]
+    H --> I["🎉 Deployment Ready<br/>Tetris Game"]
+    
+    style A fill:#e3f2fd
+    style C fill:#f3e5f5
+    style E fill:#e8f5e8
+    style I fill:#fff3e0
 ```
+
+**Framework Benefits Demonstrated:**
+- **🎯 Clear Requirements**: TETRIS_PRP.md defines exactly what to build
+- **🏗️ Systematic Architecture**: Generated DESIGN.md provides complete technical foundation  
+- **🔧 Consistent Implementation**: CLAUDE.md ensures quality standards throughout
+- **🚀 Production Ready**: Complete working game with testing and deployment
 
 ## Additional Considerations
 
