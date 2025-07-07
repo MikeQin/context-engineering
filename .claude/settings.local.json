@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/generate_design ./example/TETRIS_PRP.md)",
+      "Bash(grep:*)",
+      "Bash(mv:*)",
+      "Bash(find:*)",
+      "Bash(bash:*)",
+      "Bash(diff:*)",
+      "Bash(rm:*)"
+    ],
+    "deny": []
+  }
+}
