@@ -136,27 +136,57 @@ graph LR
 
 ## Implementation Strategy
 
-The command follows a systematic approach:
+The command efficiently executes using the new 19 internal commands in a systematic approach:
 
-### Phase 1: Project Setup
-- Validates three-document pattern
-- Analyzes requirements and architecture
-- Sets up development environment
+### Phase 1: Internal Configuration & Project Setup
+- **Read `.claude/CLAUDE.md`** - Load internal toolkit configuration and capabilities
+- **Initialize internal tools** - Access 19 specialized commands and templates
+- `/load` - Load and validate three-document pattern
+- `/scan --validate` - Validate all framework documents
+- **Read project's `CLAUDE.md`** - Load context engineering methodology and standards
+- **Merge configurations** - Combine internal toolkit with project methodology
+- `/analyze --arch --think` - Analyze requirements and architecture consistency
+- `/dev-setup` - Initialize development environment
 
 ### Phase 2: Core Implementation
-- Creates project structure as defined in DESIGN.md
-- Implements core features following PRP specifications
-- Applies all methodology standards from CLAUDE.md
+- `/build --init` - Create project structure as defined in DESIGN.md
+- `/build --feature` - Implement core features following PRP specifications
+- `/build --nextjs --tailwind --shadcn` - Generate modern UI components (if applicable)
+- `/spawn` - Execute parallel implementation tasks efficiently
 
 ### Phase 3: Quality Assurance
-- Implements comprehensive testing strategy
-- Ensures code quality and standards compliance
-- Validates all acceptance criteria
+- `/test --coverage --e2e` - Implement comprehensive testing strategy
+- `/review --quality --evidence` - Ensure code quality and standards compliance
+- `/scan --security --strict` - Validate security requirements
+- `/analyze --performance` - Validate performance criteria
 
 ### Phase 4: Production Readiness
-- Completes documentation and setup guides
-- Implements deployment configuration
-- Validates production readiness checklist
+- `/document` - Generate complete documentation and setup guides
+- `/deploy --plan` - Create deployment configuration
+- `/cleanup --validate` - Final validation and cleanup
+- `/git` - Commit and prepare for deployment
+
+This systematic approach leverages the full capabilities of the specialized command toolkit to ensure efficient, high-quality implementation execution.
+
+**Note:** The internal commands execute automatically and transparently. Users simply run `/execute_project` and Claude internally uses the appropriate specialized commands to deliver optimal results without requiring user awareness or intervention.
+
+## Dual Configuration System
+
+This command operates with two complementary CLAUDE.md files:
+
+1. **`.claude/CLAUDE.md`** (Internal Toolkit Configuration)
+   - **Purpose**: Provides access to 19 specialized commands and Next.js + Tailwind templates
+   - **Source**: Based on SuperClaude project for enhanced Claude capabilities
+   - **Scope**: Internal tool library for efficient task execution
+   - **Usage**: Read first to initialize internal toolkit capabilities
+
+2. **Project's `CLAUDE.md`** (Context Engineering Methodology)  
+   - **Purpose**: Defines development methodology, coding standards, and project-specific patterns
+   - **Source**: Three-Document Pattern Context Engineering Framework
+   - **Scope**: Project-specific methodology and quality standards
+   - **Usage**: Read second to understand project's "HOW to build" requirements
+
+**Configuration Merge Process**: The command combines both configurations to leverage internal toolkit efficiency while adhering to project-specific methodology and standards.
 
 ## Best Practices
 

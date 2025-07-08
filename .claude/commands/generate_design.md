@@ -75,19 +75,63 @@ Creates a `[PRODUCT_NAME]_DESIGN.md` file in the current directory with complete
 
 ## Command Implementation
 
-The command will:
+The command will efficiently execute using the new 19 internal commands:
 
-1. **Validate input files exist and are readable**
-2. **Read and parse the PRP file** to understand project requirements
-3. **Extract the product name** from the `**Product Name**: \`[NAME]\`` field
-4. **Read the CLAUDE.md file** (from same directory as PRP) to understand development methodology
-5. **Generate comprehensive `[PRODUCT_NAME]_DESIGN.md`** in the same directory as the PRP file
-6. **Use correct relative paths** for all document references based on file locations
-7. **Use the product name consistently** throughout the generated design document
-8. **Ensure the design addresses all requirements** specified in the PRP
-9. **Follow architecture patterns and quality standards** defined in CLAUDE.md
-10. **Include technical diagrams** where helpful for understanding
-11. **Create actionable implementation strategy** with clear next steps
+1. **Internal Configuration & Setup**
+   - **Read `.claude/CLAUDE.md`** - Load internal toolkit configuration and capabilities
+   - **Initialize internal tools** - Access 19 specialized commands and templates
+   - `/load` - Load project context and validate input files
+   - `/scan --validate` - Validate PRP and CLAUDE.md file formats
+   - `/analyze --code` - Parse PRP file and extract product name
+
+2. **Context Engineering Configuration**
+   - **Read project's `CLAUDE.md`** - Load context engineering methodology and standards
+   - **Merge configurations** - Combine internal toolkit with project methodology
+   - `/analyze --arch --think` - Analyze project requirements and constraints
+   - `/review --quality` - Review PRP completeness and clarity
+   - `/scan --security` - Identify security considerations from requirements
+
+3. **Architecture Design**
+   - `/design --api --ddd` - Create system architecture and API design
+   - `/design --prd` - Generate product requirements analysis
+   - `/analyze --profile` - Assess performance and scalability needs
+
+4. **Technical Planning**
+   - `/estimate --detailed` - Create project estimation and timeline
+   - `/scan --deps` - Analyze external dependencies and integrations
+   - `/build --init` - Plan project structure and technology stack
+
+5. **Documentation Generation**
+   - `/document` - Generate comprehensive DESIGN.md with all sections
+   - `/explain --depth expert` - Create technical diagrams and explanations
+   - `/review --evidence` - Validate design completeness and accuracy
+
+6. **Quality Assurance**
+   - `/scan --strict` - Validate design against quality standards
+   - `/analyze --security` - Ensure security considerations are addressed
+   - `/task` - Create actionable implementation tasks and next steps
+
+This systematic approach ensures comprehensive, high-quality DESIGN.md generation using the full capabilities of the specialized command toolkit.
+
+**Note:** The internal commands execute automatically and transparently. Users simply run `/generate_design` and Claude internally uses the appropriate specialized commands to deliver optimal results without requiring user awareness or intervention.
+
+## Dual Configuration System
+
+This command operates with two complementary CLAUDE.md files:
+
+1. **`.claude/CLAUDE.md`** (Internal Toolkit Configuration)
+   - **Purpose**: Provides access to 19 specialized commands and Next.js + Tailwind templates
+   - **Source**: Based on SuperClaude project for enhanced Claude capabilities
+   - **Scope**: Internal tool library for efficient task execution
+   - **Usage**: Read first to initialize internal toolkit capabilities
+
+2. **Project's `CLAUDE.md`** (Context Engineering Methodology)  
+   - **Purpose**: Defines development methodology, coding standards, and project-specific patterns
+   - **Source**: Three-Document Pattern Context Engineering Framework
+   - **Scope**: Project-specific methodology and quality standards
+   - **Usage**: Read second to understand project's "HOW to build" requirements
+
+**Configuration Merge Process**: The command combines both configurations to leverage internal toolkit efficiency while adhering to project-specific methodology and standards.
 
 ## Quality Assurance
 

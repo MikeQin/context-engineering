@@ -74,6 +74,28 @@ Traditional prompt engineering focuses on clever request phrasing—like giving 
 | Manual error correction | Built-in validation loops |
 | Limited complexity | Enterprise-scale implementations |
 
+## ✨ Enhanced Capabilities
+
+The framework now includes a comprehensive **Internal Toolkit** that automatically enhances Claude Code with:
+
+### **🔧 19 Specialized Commands**
+- **Analysis Tools**: `/analyze`, `/review`, `/scan`, `/explain` - Multi-dimensional code analysis
+- **Development Tools**: `/build`, `/dev-setup`, `/test` - Next.js + Tailwind CSS focused development
+- **Operations Tools**: `/deploy`, `/migrate`, `/cleanup` - Production-ready deployment
+- **Design Tools**: `/design`, `/document`, `/estimate` - Architecture and documentation
+- **Utility Tools**: `/troubleshoot`, `/improve`, `/spawn` - Advanced debugging and optimization
+
+### **🧠 9 Cognitive Personas**
+Switch between specialized thinking modes: `--persona-architect`, `--persona-frontend`, `--persona-security`, `--persona-qa`, and 5 more specialized approaches.
+
+### **⚡ Universal Capabilities**
+- **Thinking Modes**: `--think`, `--think-hard`, `--ultrathink` for progressive analysis depth
+- **MCP Integration**: `--c7`, `--seq`, `--pup` flags for Context7, Sequential, and Puppeteer
+- **Next.js + Tailwind**: `--nextjs`, `--tailwind`, `--shadcn` for modern UI generation
+- **Token Optimization**: `--uc` for UltraCompressed mode with 70% token reduction
+
+**🎯 Auto-Detection**: When you use this framework, Claude Code automatically detects `.claude/CLAUDE.md` and gains access to all enhanced capabilities.
+
 ## 🚀 Quick Start
 
 Ready to transform your AI development process? Here's how to get started:
@@ -115,7 +137,29 @@ chmod +x install.sh
 ./install.sh
 ```
 
-### Step 6: **Generate Your Architecture**
+### Step 6: **MCP Server Integration**
+For enhanced capabilities with **claude toolkit**, you are required to integrate MCP servers. These MCP servers are free to use:
+
+```bash
+# Add context7 mcp server integration
+claude mcp add --transport http context7 https://mcp.context7.com/mcp
+# Remove after integration
+claude mcp remove context7
+
+# Add sequential-thinking mcp server integration
+claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking
+# Remove after integration
+claude mcp remove sequential-thinking
+
+# Add puppeteer mcp server integration
+claude mcp add puppeteer npx @modelcontextprotocol/server-puppeteer
+# Remove after integration
+claude mcp remove puppeteer
+```
+
+**Note:** MCP integration provides access to advanced features like library documentation (Context7), multi-step reasoning (Sequential), and browser automation (Puppeteer) for enhanced development capabilities.
+
+### Step 7: **Generate Your Architecture**
 ```bash
 # Generate DESIGN.md from your customized PRP
 /generate_design ./my-awesome-app/PRODUCT_PRP.md
@@ -123,7 +167,7 @@ chmod +x install.sh
 # This creates [PRODUCT_NAME]_DESIGN.md in your project folder
 ```
 
-### Step 7: **Execute the Implementation**
+### Step 8: **Execute the Implementation**
 ```bash
 # Execute complete product implementation using all three documents
 /execute_project ./my-awesome-app
@@ -131,7 +175,7 @@ chmod +x install.sh
 # This creates the complete working product following your specifications
 ```
 
-### Step 8: **Deploy and Launch**
+### Step 9: **Deploy and Launch**
 Your product is now production-ready:
 - **Complete implementation** with all features from PRP
 - **Full test coverage** as specified in DESIGN.md
@@ -200,13 +244,41 @@ context-engineering/                 # Clone this repository
 ├── README.md                    # This overview and quick start guide
 ├── INTRO.md                     # Executive summary for presentations
 ├── LICENSE                      # MIT License
+├── CODE_OF_CONDUCT.md           # Community guidelines
+├── VERSION                      # Framework version (1.0.0)
 ├── install.sh                  # Simple installer for framework commands
 ├── .gitignore                  # Git ignore patterns
-├── .claude/commands/           # Claude CLI command definitions
-│   ├── generate_design.md      # Architecture generation command
-│   └── execute_project.md      # Project implementation command
+├── .claude/                    # Internal toolkit (auto-detected by Claude Code)
+│   ├── CLAUDE.md               # Internal toolkit configuration
+│   ├── commands/               # 19 specialized development tools
+│   │   ├── analyze.md          # Multi-dimensional code analysis
+│   │   ├── build.md            # Next.js + Tailwind project builder
+│   │   ├── design.md           # System architecture and API design
+│   │   ├── execute_project.md  # Project implementation command
+│   │   ├── generate_design.md  # Architecture generation command
+│   │   ├── review.md           # AI-powered code review
+│   │   ├── scan.md             # Security and validation
+│   │   ├── test.md             # Testing framework
+│   │   ├── [11 more tools].md  # Complete development lifecycle
+│   │   └── [24 config files].yml # Modular configuration system
+│   ├── shared/                 # Core configuration modules
+│   │   ├── toolkit-core.yml    # Core philosophy and standards
+│   │   ├── toolkit-mcp.yml     # MCP server integration
+│   │   ├── toolkit-personas.yml # 9 cognitive personas
+│   │   └── toolkit-rules.yml   # Development rules and practices
+│   └── templates/              # Next.js + Tailwind CSS templates
+│       └── nextjs-tailwind/    # shadcn/ui components and layouts
+│           ├── components/     # UI component library
+│           ├── patterns/       # Tailwind utility patterns
+│           └── generators/     # Component generation logic
+├── toolkit/                    # Internal toolkit documentation
+│   ├── README.md               # Comprehensive toolkit guide
+│   ├── ARCHITECTURE.md         # Technical architecture
+│   └── TUTORIAL.md             # Complete commands tutorial
 ├── docs/                       # Framework documentation
-│   └── DESIGN_DECISIONS.md     # Architectural decisions and analysis
+│   ├── DESIGN_DECISIONS.md     # Architectural decisions and analysis
+│   ├── MEDIUM_ARTICLE.md       # Framework methodology article
+│   └── THANKYOU.md             # Acknowledgments and credits
 ├── framework/                  # Templates to copy to your projects
 │   ├── PRODUCT_PRP.md          # Enterprise template for complex projects
 │   ├── PRODUCT_PRP_SLIM.md     # Slim template for simple apps & quick builds
@@ -227,11 +299,20 @@ context-engineering/                 # Clone this repository
 
 ### Key Documents Explained:
 
+**Framework Templates:**
 - **[framework/PRODUCT_PRP.md](./framework/PRODUCT_PRP.md)** - Enterprise template for complex projects with comprehensive requirements
 - **[framework/PRODUCT_PRP_SLIM.md](./framework/PRODUCT_PRP_SLIM.md)** - Streamlined template for simple apps, prototypes, and quick builds
 - **[framework/CLAUDE.md](./framework/CLAUDE.md)** - Development methodology supporting Python and Next.js projects
+
+**Internal Toolkit (Auto-Detected by Claude Code):**
+- **[.claude/CLAUDE.md](./.claude/CLAUDE.md)** - Internal toolkit configuration providing 19 specialized commands
+- **[toolkit/README.md](./toolkit/README.md)** - Comprehensive guide to the 19 internal tools and capabilities
+- **[toolkit/ARCHITECTURE.md](./toolkit/ARCHITECTURE.md)** - Technical architecture of the internal toolkit system
+- **[toolkit/TUTORIAL.md](./toolkit/TUTORIAL.md)** - Complete tutorial for all commands, personas, and workflows
+
+**Examples and Setup:**
 - **[example/TETRIS_PRP.md](./example/TETRIS_PRP.md)** - Real example showing how to use the enterprise template
-- **[install.sh](./install.sh)** - Simple installer for the generate_design command
+- **[install.sh](./install.sh)** - Simple installer for the framework commands
 
 ### External Live Implementation:
 - **🎮 [Live Tetris Demo](https://tetris-game-ruddy.vercel.app/)** - Working game built using this framework
@@ -447,9 +528,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
+### **Framework Foundations**
+- **Context Engineering Methodology**: Inspired by [Context Engineering Introduction](https://github.com/coleam00/context-engineering-intro) by @coleam00, which demonstrates the power of comprehensive context for AI development
+- **Internal Toolkit System**: Built upon and adapted from [SuperClaude](https://github.com/NomenAK/SuperClaude) by @NomenAK, providing the foundation for our 19 specialized commands and cognitive persona system
+
+### **Development**
 - Built with insights from real-world AI development challenges
-- Tested across diverse project types and team sizes
+- Tested across diverse project types and team sizes  
 - Refined through community feedback and contributions
+
+### **Attribution Notice**
+This project incorporates ideas and code patterns from open-source projects under MIT License. All referenced projects maintain their original MIT License terms. The Three-Document Pattern Context Engineering Framework extends these concepts into a comprehensive methodology for AI-assisted development.
 
 ---
 
@@ -480,3 +569,6 @@ cp ../framework/* .
 **Begin building better software with AI today!**
 
 *The Three-Document Pattern Context Engineering Framework: Reliable, scalable, and professional AI-assisted development for the modern enterprise.*
+
+---
+[⭐ Star on GitHub](https://github.com/MikeQin/context-engineering) | [🔗 Repository](https://github.com/MikeQin/context-engineering) | [💬 Discussions](https://github.com/MikeQin/context-engineering/discussions) | [🐛 Report Issues](https://github.com/MikeQin/context-engineering/issues)

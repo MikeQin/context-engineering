@@ -1,0 +1,45 @@
+{
+  "layouts": {
+    "container": "container mx-auto px-4 sm:px-6 lg:px-8",
+    "centered": "flex items-center justify-center min-h-screen",
+    "grid-responsive": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+    "sidebar-layout": "flex min-h-screen",
+    "sticky-header": "sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+  },
+  "typography": {
+    "heading-1": "text-4xl font-bold tracking-tight lg:text-5xl",
+    "heading-2": "text-3xl font-semibold tracking-tight",
+    "heading-3": "text-2xl font-semibold tracking-tight",
+    "body-large": "text-lg text-muted-foreground",
+    "body-small": "text-sm text-muted-foreground",
+    "code": "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold"
+  },
+  "spacing": {
+    "section-padding": "py-12 md:py-24 lg:py-32",
+    "card-padding": "p-6 lg:p-8",
+    "form-spacing": "space-y-6",
+    "button-spacing": "space-x-4"
+  },
+  "borders": {
+    "card-border": "border border-border rounded-lg",
+    "input-border": "border border-input rounded-md",
+    "divider": "border-t border-border"
+  },
+  "shadows": {
+    "card": "shadow-sm hover:shadow-md transition-shadow",
+    "button": "shadow-sm hover:shadow-md",
+    "dropdown": "shadow-md border"
+  },
+  "animations": {
+    "fade-in": "animate-in fade-in-0 duration-500",
+    "slide-up": "animate-in slide-in-from-bottom-4 duration-500",
+    "slide-down": "animate-in slide-in-from-top-4 duration-500",
+    "scale-in": "animate-in zoom-in-95 duration-300"
+  },
+  "states": {
+    "loading": "opacity-50 pointer-events-none",
+    "disabled": "opacity-50 cursor-not-allowed",
+    "error": "border-destructive text-destructive",
+    "success": "border-green-500 text-green-700"
+  }
+}
