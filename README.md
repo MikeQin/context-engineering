@@ -132,7 +132,7 @@ cp ../framework/* .
 - **For CLI Applications**: Customize `PRODUCT_PRP_CLI.md` with your command-line tool requirements
 - **Study the Example**: Review [`../example/TETRIS_PRP.md`](./example/TETRIS_PRP.md) to see the framework in action
 
-### Step 5: **Install the Commands**
+### Step 5: **Install the Commands (Optional)**
 ```bash
 # From the framework root directory
 chmod +x install.sh
