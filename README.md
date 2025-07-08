@@ -42,14 +42,14 @@ Our framework has demonstrated remarkable success across diverse projects:
 
 ### Universal Applicability
 
-The framework works seamlessly across all software development domains:
+The framework works seamlessly across multiple software development domains:
 
-- ✅ **Web Applications** (Next.js, React, Vue)
-- ✅ **Mobile Applications** (React Native, Flutter, native)
-- ✅ **APIs & Backend Services** (FastAPI, Express, microservices)
-- ✅ **Desktop Applications** (Electron, Tauri, native)
-- ✅ **CLI Tools** (Python, Node.js, Go, Rust)
-- ✅ **AI/ML Projects** (Data science, machine learning models)
+- ✅ **Web Applications** (Next.js, React, Vue) - Full toolkit support
+- ✅ **APIs & Backend Services** (FastAPI, Express, microservices) - Full toolkit support
+- ✅ **CLI Tools** (Python Click/Typer, Node.js, Go, Rust) - Full toolkit support
+- ✅ **AI/ML Projects** (Data science, machine learning models) - Full methodology support
+- 🔄 **Mobile Applications** (React Native, Flutter, native) - Methodology support, toolkit enhancements planned
+- 🔄 **Desktop Applications** (Electron, Tauri, native) - Methodology support, toolkit enhancements planned
 
 ### Key Business Benefits
 
@@ -80,7 +80,7 @@ The framework now includes a comprehensive **Internal Toolkit** that automatical
 
 ### **🔧 19 Specialized Commands**
 - **Analysis Tools**: `/analyze`, `/review`, `/scan`, `/explain` - Multi-dimensional code analysis
-- **Development Tools**: `/build`, `/dev-setup`, `/test` - Next.js + Tailwind CSS focused development
+- **Development Tools**: `/build`, `/dev-setup`, `/test` - Next.js + Tailwind CSS and Python CLI development
 - **Operations Tools**: `/deploy`, `/migrate`, `/cleanup` - Production-ready deployment
 - **Design Tools**: `/design`, `/document`, `/estimate` - Architecture and documentation
 - **Utility Tools**: `/troubleshoot`, `/improve`, `/spawn` - Advanced debugging and optimization
@@ -92,6 +92,7 @@ Switch between specialized thinking modes: `--persona-architect`, `--persona-fro
 - **Thinking Modes**: `--think`, `--think-hard`, `--ultrathink` for progressive analysis depth
 - **MCP Integration**: `--c7`, `--seq`, `--pup` flags for Context7, Sequential, and Puppeteer
 - **Next.js + Tailwind**: `--nextjs`, `--tailwind`, `--shadcn` for modern UI generation
+- **Python CLI**: `--python`, `--cli`, `--click`, `--typer` for command-line application development
 - **Token Optimization**: `--uc` for UltraCompressed mode with 70% token reduction
 
 **🎯 Auto-Detection**: When you use this framework, Claude Code automatically detects `.claude/CLAUDE.md` and gains access to all enhanced capabilities.
@@ -128,34 +129,17 @@ cp ../framework/* .
 ### Step 4: **Choose and Customize Your Template**
 - **For Complex Projects**: Customize `PRODUCT_PRP.md` with your requirements
 - **For Simple Projects**: Customize `PRODUCT_PRP_SLIM.md` with your requirements
+- **For CLI Applications**: Customize `PRODUCT_PRP_CLI.md` with your command-line tool requirements
 - **Study the Example**: Review [`../example/TETRIS_PRP.md`](./example/TETRIS_PRP.md) to see the framework in action
 
-### Step 5: **Install the Commands (Optional)**
+### Step 5: **Install the Commands**
 ```bash
 # From the framework root directory
 chmod +x install.sh
 ./install.sh
 ```
 
-### Step 6: **MCP Server Integration**
-For enhanced capabilities with **claude toolkit**, you are required to integrate MCP servers. These MCP servers are free to use:
-
-```bash
-# Add context7 mcp server integration
-claude mcp add --transport http context7 https://mcp.context7.com/mcp
-# Remove after integration
-claude mcp remove context7
-
-# Add sequential-thinking mcp server integration
-claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking
-# Remove after integration
-claude mcp remove sequential-thinking
-
-# Add puppeteer mcp server integration
-claude mcp add puppeteer npx @modelcontextprotocol/server-puppeteer
-# Remove after integration
-claude mcp remove puppeteer
-```
+This will install the framework commands and optionally configure MCP servers for enhanced capabilities.
 
 **Note:** MCP integration provides access to advanced features like library documentation (Context7), multi-step reasoning (Sequential), and browser automation (Puppeteer) for enhanced development capabilities.
 
@@ -247,6 +231,11 @@ context-engineering/                 # Clone this repository
 ├── CODE_OF_CONDUCT.md           # Community guidelines
 ├── VERSION                      # Framework version (1.0.0)
 ├── install.sh                  # Simple installer for framework commands
+├── toolkit/                    # Internal toolkit documentation
+│   ├── install_all.sh          # Complete installation script (internal use)
+│   ├── README.md               # Comprehensive toolkit guide
+│   ├── ARCHITECTURE.md         # Technical architecture
+│   └── TUTORIAL.md             # Complete commands tutorial
 ├── .gitignore                  # Git ignore patterns
 ├── .claude/                    # Internal toolkit (auto-detected by Claude Code)
 │   ├── CLAUDE.md               # Internal toolkit configuration
@@ -272,6 +261,7 @@ context-engineering/                 # Clone this repository
 │           ├── patterns/       # Tailwind utility patterns
 │           └── generators/     # Component generation logic
 ├── toolkit/                    # Internal toolkit documentation
+│   ├── install_all.sh          # Complete installation script (internal use)
 │   ├── README.md               # Comprehensive toolkit guide
 │   ├── ARCHITECTURE.md         # Technical architecture
 │   └── TUTORIAL.md             # Complete commands tutorial
@@ -302,7 +292,8 @@ context-engineering/                 # Clone this repository
 **Framework Templates:**
 - **[framework/PRODUCT_PRP.md](./framework/PRODUCT_PRP.md)** - Enterprise template for complex projects with comprehensive requirements
 - **[framework/PRODUCT_PRP_SLIM.md](./framework/PRODUCT_PRP_SLIM.md)** - Streamlined template for simple apps, prototypes, and quick builds
-- **[framework/CLAUDE.md](./framework/CLAUDE.md)** - Development methodology supporting Python and Next.js projects
+- **[framework/PRODUCT_PRP_CLI.md](./framework/PRODUCT_PRP_CLI.md)** - Specialized template for command-line interface applications
+- **[framework/CLAUDE.md](./framework/CLAUDE.md)** - Development methodology supporting Python CLI, Next.js, and backend projects
 
 **Internal Toolkit (Auto-Detected by Claude Code):**
 - **[.claude/CLAUDE.md](./.claude/CLAUDE.md)** - Internal toolkit configuration providing 19 specialized commands
@@ -325,8 +316,9 @@ context-engineering/                 # Clone this repository
 2. **Choose Your Approach**: 
    - **Simple Projects**: Use [`framework/PRODUCT_PRP_SLIM.md`](./framework/PRODUCT_PRP_SLIM.md) for quick builds
    - **Complex Projects**: Use [`framework/PRODUCT_PRP.md`](./framework/PRODUCT_PRP.md) for enterprise requirements
+   - **CLI Applications**: Use [`framework/PRODUCT_PRP_CLI.md`](./framework/PRODUCT_PRP_CLI.md) for command-line tools
 3. **See It In Action**: Review [`example/TETRIS_PRP.md`](./example/TETRIS_PRP.md) as a working example
-4. **Install Command**: Run [`install.sh`](./install.sh) for easier DESIGN.md generation
+4. **Install Commands**: Run [`install.sh`](./install.sh) for easier DESIGN.md generation
 5. **Set Standards**: Use [`framework/CLAUDE.md`](./framework/CLAUDE.md) for development methodology
 6. **Practice**: Apply the framework to your own projects
 
@@ -371,6 +363,12 @@ The Three-Document Pattern Context Engineering Framework adapts to any project s
 - **Timeline**: Weeks to months
 - **Features**: Comprehensive requirements, risk assessment, compliance, maintenance planning
 
+### **For CLI Applications**
+- **Use**: [`framework/PRODUCT_PRP_CLI.md`](./framework/PRODUCT_PRP_CLI.md)
+- **Perfect For**: Command-line tools, automation scripts, developer utilities
+- **Timeline**: Days to weeks
+- **Features**: Command structure, argument parsing, configuration management, distribution
+
 ### **For Learning & Examples**
 - **Use**: [`example/TETRIS_PRP.md`](./example/TETRIS_PRP.md)
 - **Perfect For**: Understanding the framework, seeing real implementation
@@ -406,6 +404,15 @@ Getting started requires these simple steps:
 5. **Generate architecture**: `/generate_design ./my-app/PRODUCT_PRP_SLIM.md`
 6. **Execute implementation**: `/execute_project ./my-app`
 7. **Deploy your product**: Complete, production-ready code generated
+
+### **CLI Application Start**
+1. **Clone framework**: `git clone [repo-url] && cd context-engineering`
+2. **Create project folder**: `mkdir my-cli-tool && cd my-cli-tool`
+3. **Copy templates**: `cp ../framework/* .`
+4. **Customize**: Fill in `PRODUCT_PRP_CLI.md` with your CLI requirements
+5. **Generate architecture**: `/generate_design ./my-cli-tool/PRODUCT_PRP_CLI.md`
+6. **Execute implementation**: `/execute_project ./my-cli-tool`
+7. **Package and distribute**: Complete CLI application ready for distribution
 
 ### **Enterprise Start (Complex Projects)**
 1. **Clone framework**: `git clone [repo-url] && cd context-engineering`
@@ -517,10 +524,18 @@ We welcome contributions to improve The Three-Document Pattern Context Engineeri
 
 The Three-Document Pattern Context Engineering Framework represents the foundation for the next generation of AI-assisted development:
 
+### **Near-term Enhancements (Next 6 months)**
+- **Mobile Development Support**: Full toolkit integration for React Native, Flutter, and native mobile development
+- **Desktop Application Support**: Enhanced toolkit capabilities for Electron, Tauri, and native desktop applications
+- **Enhanced Testing Patterns**: Mobile-specific testing strategies and device simulation integration
+- **Deployment Automation**: Mobile app store deployment and desktop distribution workflows
+
+### **Long-term Vision (12+ months)**
 - **AI-AI Collaboration**: Multiple AI agents working with shared context
 - **Visual Context Engineering**: Diagram-driven development processes  
 - **Industry Standardization**: Universal adoption across software development
 - **Educational Integration**: Universities teaching context engineering principles
+- **Cross-Platform Templates**: Unified templates for web, mobile, and desktop development
 
 ## 📄 License
 
@@ -571,4 +586,7 @@ cp ../framework/* .
 *The Three-Document Pattern Context Engineering Framework: Reliable, scalable, and professional AI-assisted development for the modern enterprise.*
 
 ---
+"**Context Engineering** is replacing **Vibe Coding** as the dominant AI development methodology."  
+Or simply, "**Context Engineering is a new way of Vibe Coding.**"
+
 [⭐ Star on GitHub](https://github.com/MikeQin/context-engineering) | [🔗 Repository](https://github.com/MikeQin/context-engineering) | [💬 Discussions](https://github.com/MikeQin/context-engineering/discussions) | [🐛 Report Issues](https://github.com/MikeQin/context-engineering/issues)

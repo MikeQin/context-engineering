@@ -29,6 +29,15 @@
     - `agent.py` - Main agent definition and execution logic 
     - `tools.py` - Tool functions used by the agent 
     - `prompts.py` - System prompts
+  - **CLI Applications**:
+    - `src/[cli_package]/` - Main CLI package directory
+    - `src/[cli_package]/__main__.py` - Entry point for `python -m [package]`
+    - `src/[cli_package]/cli.py` - Main CLI interface and argument parsing
+    - `src/[cli_package]/commands/` - Individual command implementations
+    - `src/[cli_package]/config/` - Configuration management and settings
+    - `src/[cli_package]/utils/` - CLI utility functions and helpers
+    - `pyproject.toml` - Modern Python packaging with console entry points
+    - `tests/test_cli.py` - CLI-specific testing with command simulation
   - **General Python**:
     - `src/` - Main source code directory
     - `config/` - Configuration files and settings
@@ -91,6 +100,30 @@
   - **Use database fixtures** for consistent test data
   - **Test database migrations** and schema changes
 
+#### CLI Testing (Command-Line Applications)
+- **Use pytest with subprocess or Click's testing utilities** for CLI testing
+- **Testing patterns and structure**:
+  - `tests/test_cli.py` - Main CLI interface testing
+  - `tests/test_commands/` - Individual command testing
+  - `tests/fixtures/` - Test data files and configuration
+- **CLI testing strategies**:
+  - **Use Click's CliRunner** for isolated command testing
+  - **Test command-line argument parsing** and validation
+  - **Test configuration loading** from files and environment variables
+  - **Test output formatting** and error messages
+  - **Test exit codes** for success and failure scenarios
+- **CLI testing patterns**:
+  - Test all command combinations and option flags
+  - Test with various input formats and edge cases
+  - Mock external dependencies (APIs, file system, databases)
+  - Test interactive prompts and user input scenarios
+  - Test help text and usage information accuracy
+- **CLI-specific testing considerations**:
+  - **Test installation and packaging** with temporary environments
+  - **Test configuration file loading** with different formats
+  - **Test environment variable precedence** and overrides
+  - **Test file processing** with temporary test files
+
 #### Next.js Testing (Frontend)
 - **Use Jest and React Testing Library** for component testing
 - **Test file location**: Co-locate tests with components or use `__tests__` folders
@@ -118,6 +151,7 @@
 #### Technology Stack
 - **Backend**: Python with FastAPI, SQLAlchemy/SQLModel for ORM
 - **Frontend**: Next.js (App Router), JavaScript, Tailwind CSS
+- **CLI**: Python with Click/Typer, Rich for enhanced output
 - **Database**: PostgreSQL (Production), SQLite (Dev/Sandbox)
 
 #### Python Style (Backend/API)
@@ -205,6 +239,37 @@
   - **Component variants**: Use conditional classes with logical operators
   - **Responsive design**: Mobile-first approach with Tailwind breakpoints
   - **Dark mode**: Use Tailwind's dark mode classes with next-themes
+
+#### CLI Style (Command-Line Applications)
+- **CLI framework conventions**:
+  - **Use Click or Typer** for modern CLI applications with decorators and type hints
+  - **Follow UNIX CLI conventions** for argument naming and behavior patterns
+  - **Use consistent command structure** across all subcommands and options
+- **Documentation standards**:
+  - **Write comprehensive help text** for all commands and options:
+    ```python
+    @click.command()
+    @click.option('--input', '-i', help='Input file path', required=True)
+    @click.option('--output', '-o', help='Output file path (default: stdout)')
+    def process(input: str, output: str) -> None:
+        """Process input file and generate formatted output.
+        
+        This command reads the input file, processes the data according
+        to the specified format, and writes the results to the output file.
+        """
+    ```
+  - **Include usage examples** in command help and documentation
+  - **Document configuration options** and environment variables
+- **Error handling and user experience**:
+  - **Use clear, actionable error messages** with suggested solutions
+  - **Follow proper exit codes** (0 for success, non-zero for errors)
+  - **Provide progress indicators** for long-running operations with Rich
+  - **Support common CLI patterns** like pipes, redirection, and batch processing
+- **Configuration and packaging**:
+  - **Use `pyproject.toml`** for modern Python packaging with console entry points
+  - **Support multiple configuration sources** with clear precedence order
+  - **Include proper entry points** for system-wide installation
+  - **Follow semantic versioning** for CLI tool releases
 
 #### Code Organization Patterns
 - **Imports order**:

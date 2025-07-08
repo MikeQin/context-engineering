@@ -4,9 +4,10 @@
 
 **Description**: "An internal toolkit for enhanced Claude development with specialized tools, modern templates, and structured methodologies"
 
-A modern configuration framework that enhances Claude Code with Next.js + Tailwind CSS, specialized commands, cognitive personas, and zero-cost UI generation.
+A modern configuration framework that enhances Claude Code with Next.js + Tailwind CSS, Python CLI development, specialized commands, cognitive personas, and zero-cost application generation.
 
 ## 🌟 Modern Technology Stack
+**Web Development:**
 - **Next.js App Router** - Latest React patterns with server components
 - **Tailwind CSS** - Utility-first styling with responsive design
 - **shadcn/ui** - Professional component library with accessibility
@@ -14,13 +15,20 @@ A modern configuration framework that enhances Claude Code with Next.js + Tailwi
 - **Zod + React Hook Form** - Robust form validation
 - **Lucide + Heroicons** - Beautiful icon libraries
 
+**CLI Development:**
+- **Python + Click/Typer** - Modern CLI frameworks with decorators
+- **Rich/Colorama** - Enhanced terminal output and styling
+- **PyYAML/TOML** - Configuration file management
+- **Poetry/setuptools** - Modern packaging and distribution
+
 ## ✨ Features
 
 **Claude Toolkit** enhances `Claude Code` with:
 - **19 Specialized Commands** covering complete development lifecycle
 - **9 Cognitive Personas** for domain-specific approaches
 - **Next.js + Tailwind CSS Templates** for modern web development
-- **Zero External Dependencies** for UI generation
+- **Python CLI Application Patterns** for command-line tool development
+- **Zero External Dependencies** for UI and CLI generation
 - **Evidence-Based Methodology** encouraging documentation
 - **MCP Integration** with Context7, Sequential, Puppeteer
 - **Git Checkpoint Support** for safe experimentation
@@ -35,6 +43,7 @@ Modern component and application generation:
 /build --nextjs --tailwind --shadcn              # Complete Next.js app
 /build --nextjs --app-router --forms --dashboard # Dashboard with forms
 /build --react --tailwind --components           # React component library
+/build --python --cli --click                    # Python CLI with Click
 /build --nextjs --tailwind --responsive          # Mobile-first design
 ```
 
@@ -43,7 +52,8 @@ Switch between different approaches with persona flags:
 
 ```bash
 /analyze --code --persona-architect     # Systems thinking approach
-/build --nextjs --persona-frontend      # UX-focused development  
+/build --nextjs --persona-frontend      # UX-focused development
+/build --python --cli --persona-backend # CLI development with backend focus  
 /scan --security --persona-security     # Security-first analysis
 /troubleshoot --prod --persona-analyzer # Root cause analysis approach
 ```
@@ -54,6 +64,7 @@ Development lifecycle coverage:
 **Development Commands**
 ```bash
 /build --nextjs --tailwind --shadcn    # Modern web development
+/build --python --cli --click          # CLI application development
 /dev-setup --nextjs --tailwind         # Environment setup
 /test --coverage --e2e --pup           # Testing strategies
 ```
@@ -83,22 +94,20 @@ Development lifecycle coverage:
 **⚠️ Important:** Claude Toolkit does not include MCP servers. You need to install them separately in Claude Code's MCP settings to use MCP-related flags (--c7, --seq, --pup).
 
 **MCP Server Integration**
+
+Add MCP servers integration:
 ```sh
 # Add context7 mcp server integration
 claude mcp add --transport http context7 https://mcp.context7.com/mcp
-# Remove after instegration
-claude mcp remove context7
 
 # Add sequential-thinking mcp server integration
 claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking
-# Remove after instegration
-claude mcp remove sequential-thinking
 
 # Add puppeteer mcp server integration
 claude mcp add puppeteer npx @modelcontextprotocol/server-puppeteer
-# Remove after instegration
-claude mcp remove puppeteer
 ```
+
+**Note:** To manage or remove MCP servers after installation, use Claude Code's native MCP management commands as needed.
 
 ### 📊 **Token Efficiency**
 **Claude Toolkit**'s `@include` template system helps manage token usage:
@@ -115,6 +124,14 @@ claude mcp remove puppeteer
 /estimate --detailed --nextjs-complexity --seq             # Resource planning
 /scan --security --nextjs --persona-security               # Security review
 /build --nextjs --tailwind --shadcn --forms                # Implementation
+```
+
+### CLI Application Development
+```bash
+/design --cli --command-architecture --persona-backend     # CLI architecture
+/build --python --cli --click --config                     # Implementation with Click
+/test --cli --command-testing --integration                # CLI testing
+/document --cli --help-generation --man-pages              # CLI documentation
 ```
 
 ### Component Library Creation
@@ -308,14 +325,19 @@ claude mcp remove puppeteer
 
 **Perfect fit for:**
 - ✅ Modern web development with React/Next.js
+- ✅ Python CLI application development
 - ✅ Teams wanting zero-cost UI generation
 - ✅ TypeScript-first development approaches
 - ✅ Enterprise environments requiring self-contained tools
 - ✅ Projects needing accessible, production-ready components
 
+**Currently developing support for:**
+- 🔄 Mobile development (React Native, Flutter)
+- 🔄 Desktop applications (Electron, Tauri)
+- 🔄 Advanced cross-platform patterns
+
 **May not suit:**
 - ❌ Legacy web frameworks (PHP, jQuery, etc.)
-- ❌ Non-web development projects
 - ❌ Teams committed to other CSS frameworks
 
 ## 🚦 Internal Quick Tool Guide
@@ -376,9 +398,11 @@ claude mcp remove puppeteer
 ### **Our Contributions**
 - **Removed Magic MCP Server**: Replaced the paid Magic MCP server integration with Next.js + Tailwind CSS for zero-cost UI generation
 - **Next.js + Tailwind Focus**: Replaced generic React with Next.js + Tailwind CSS + shadcn/ui
+- **Python CLI Development Support**: Added comprehensive CLI application development with Click, Typer, and argparse frameworks
 - **Context Engineering Integration**: Adapted for Three-Document Pattern methodology
 - **Local Template System**: Zero-cost UI generation without external dependencies
 - **Framework Commands**: Added `/generate_design` and `/execute_project` for context engineering workflows
+- **CLI-Specific Enhancements**: Extended 6 commands (build, dev-setup, test, design, deploy, document) with CLI-specific flags and patterns
 
 ### **Legal Compliance**
 This adaptation maintains full compliance with SuperClaude's MIT License terms. All original copyright and license terms are preserved. The SuperClaude project enables derivative works and modifications under MIT License, which this project follows.

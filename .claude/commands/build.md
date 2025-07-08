@@ -1,4 +1,4 @@
-**Purpose**: Universal project builder with Next.js + Tailwind CSS templates
+**Purpose**: Universal project builder with Next.js + Tailwind CSS templates and Python CLI applications
 
 ---
 
@@ -9,16 +9,17 @@ Execute: immediate. --plan→show plan first
 Legend: Generated based on symbols used in command
 Purpose: "[Action][Subject] in $ARGUMENTS"
 
-Build project/feature based on req in $ARGUMENTS using modern Next.js + Tailwind CSS stack.
+Build project/feature based on req in $ARGUMENTS using modern Next.js + Tailwind CSS stack or Python CLI frameworks.
 
 @include shared/flag-inheritance.yml#Universal_Always
 
 Examples:
 - `/build --nextjs --tailwind --shadcn` - Next.js app w/ component library
-- `/build --nextjs --tailwind --components` - Next.js app w/ component generation
+- `/build --python --cli --click` - Python CLI w/ Click framework
+- `/build --python --cli --typer` - Python CLI w/ Typer framework
 - `/build --nextjs --app-router --forms` - Complete app with forms
 - `/build --api --c7` - API w/ docs
-- `/build --nextjs --tailwind --dashboard` - Dashboard application
+- `/build --cli --argparse` - Basic CLI w/ argparse
 
 Pre-build: Remove artifacts (dist/, build/, .next/) | Clean temp files & cache | Validate deps | Remove debug
 
@@ -31,8 +32,13 @@ Build modes:
 - **Next.js:** App Router|TS|Tailwind|shadcn/ui|testing
 - **API:** Express|TS|auth|validation|OpenAPI  
 - **Fullstack:** Next.js+tRPC+Prisma+Docker
-- **Mobile:** React Native+Expo+NativeWind
-- **CLI:** Commander.js+cfg+testing
+- **Mobile:** React Native+Expo+NativeWind (roadmap - toolkit integration planned)
+
+## Python CLI Templates:
+- **CLI + Click:** Python|Click decorators|subcommands|config|testing
+- **CLI + Typer:** Python|Typer types|autocompletion|rich output|testing  
+- **CLI + argparse:** Python|argparse|basic CLI|lightweight|testing
+- **CLI + Fire:** Python|Google Fire|automatic CLI|object methods|testing
 
 ## UI Generation Flags:
 **--nextjs:** Next.js App Router setup | TypeScript default | Modern patterns | SEO optimization
@@ -44,6 +50,24 @@ Build modes:
 **--dashboard:** Dashboard patterns | Data visualization ready | Admin interfaces | Navigation layouts
 **--icons:** Icon library integration | Lucide React | Heroicons | Type-safe icons | Customizable
 **--animations:** Animation utilities | Framer Motion ready | Tailwind animations | Micro-interactions
+
+## CLI Generation Flags:
+**--cli:** Generic CLI application | Auto-detect best framework | Project structure | Testing setup
+**--python:** Python-based CLI | Virtual environment | Modern packaging | Type hints
+**--click:** Click framework CLI | Decorators | Subcommands | Auto-help | Configuration support
+**--typer:** Typer framework CLI | Type hints | Auto-completion | Rich output | Modern Python patterns
+**--argparse:** Standard library CLI | Lightweight | Basic argument parsing | No external dependencies
+**--fire:** Google Fire CLI | Automatic CLI generation | Object method exposure | Minimal setup
+**--config:** Configuration management | YAML/JSON/TOML support | Environment variables | Config precedence
+**--rich:** Rich terminal output | Progress bars | Tables | Syntax highlighting | Colors
+**--testing:** CLI testing setup | Command testing | Argument validation | Integration tests
+
+## CLI Template Generation:
+**Command Structure:** Main CLI|Subcommands|Options|Arguments|Help system
+**Configuration:** Config files|Environment variables|Precedence handling|Validation
+**Testing Patterns:** Command testing|Argument parsing|Integration|Mock inputs
+**Packaging:** pyproject.toml|Console entry points|Distribution|Installation
+**Documentation:** Help text|Usage examples|Man pages|API documentation
 
 ## Template Generation:
 **Component Library:** shadcn/ui Button|Input|Form|Card|Dialog|Table|Navigation

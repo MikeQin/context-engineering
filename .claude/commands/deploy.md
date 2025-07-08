@@ -17,6 +17,8 @@ Examples:
 - `/deploy --env staging --think` - Staging w/ coordination analysis
 - `/deploy --env prod --think-hard` - Prod w/ comprehensive planning
 - `/deploy --rollback --ultrathink` - Critical rollback w/ full impact analysis
+- `/deploy --cli --pypi --env prod` - CLI package deployment to PyPI
+- `/deploy --cli --binary --env staging` - CLI binary distribution
 
 Deployment modes:
 
@@ -26,6 +28,18 @@ Deployment modes:
 - prod: Deploy→prod w/ all safety checks
 
 **--rollback:** Revert→previous stable deployment | Maintain deployment history→audit trail | Verify rollback success w/ health checks
+
+**--cli:** Deploy CLI application packages
+- w/ --pypi: Deploy to Python Package Index | w/ --binary: Create standalone executables
+- Package verification & testing | Version management & semantic versioning | Distribution automation
+
+**--pypi:** Deploy to Python Package Index
+- w/ --test-pypi: Deploy to test PyPI first | Validate package metadata & dependencies
+- Build wheels & source distributions | Upload with secure authentication | Verify installation
+
+**--binary:** Create standalone binary distributions
+- w/ --pyinstaller: Create executable binaries | w/ --cross-platform: Multi-platform builds
+- Bundle dependencies & assets | Create installers & packages | Test on target platforms
 
 Pre-deploy cleanup:
 - Clean previous artifacts | Remove dev-only files (.env.local, debug cfgs)
@@ -46,6 +60,22 @@ Pre-deployment checks:
 Post-deployment:
 - Run health checks & smoke tests | Monitor error rates & perf
 - Check critical user journeys | Verify logging & monitoring | Ready→rollback if issues
+
+## CLI Deployment Patterns
+
+**CLI Package Deployment:**
+- Version validation & semantic versioning
+- Package metadata verification (name, description, author, license)
+- Dependency resolution & compatibility testing
+- Console entry point configuration
+- Installation testing in clean environments
+
+**CLI Distribution Strategies:**
+- PyPI deployment for Python package management
+- Binary distribution for standalone executables
+- Container deployment for CLI as service
+- Package manager integration (brew, apt, yum)
+- Cross-platform compatibility testing
 
 ## Safety & Best Practices
 

@@ -16,6 +16,7 @@ Configure comprehensive development environments and CI/CD pipelines for $ARGUME
 Examples:
 - `/dev-setup --type node --ci github --tools` - Node.js project with GitHub Actions
 - `/dev-setup --type python --tools --think` - Python project with comprehensive tooling
+- `/dev-setup --type cli --python --click --tools` - Python CLI development environment
 - `/dev-setup --type monorepo --ci gitlab --think-hard` - Full-stack monorepo with GitLab CI
 - `/dev-setup --type react --tools --ci github` - React project with quality tools
 
@@ -24,6 +25,7 @@ Examples:
 --type flag:
 - node: Node.js/TypeScript project setup
 - python: Python virtual environment & tooling
+- cli: CLI application development environment
 - react: React + Vite/Next.js configuration
 - fullstack: Complete full-stack environment
 - monorepo: Multi-package monorepo setup
@@ -67,6 +69,36 @@ Development Tools:
 - Debug configurations
 - Task runners & scripts
 - Documentation generation
+
+## CLI Development Setup
+
+CLI-Specific Environment:
+- Python virtual environment with CLI frameworks
+- CLI testing frameworks (Click testing, subprocess testing)
+- Shell completion configuration and testing
+- CLI debugging and profiling tools
+- Package distribution setup (PyPI, wheel building)
+
+CLI Development Tools:
+- Click/Typer development dependencies
+- Rich library for enhanced terminal output
+- Configuration management libraries (PyYAML, TOML)
+- CLI testing utilities and mock frameworks
+- Terminal debugging and logging setup
+
+CLI Quality & Testing:
+- CLI-specific linting rules and patterns
+- Command-line argument validation testing
+- Integration testing with different shells
+- CLI performance testing (startup time, memory)
+- Cross-platform compatibility testing
+
+CLI Distribution:
+- pyproject.toml configuration for modern packaging
+- Console entry points and script configuration
+- Virtual environment and dependency management
+- Package building and distribution automation
+- Installation and upgrade testing
 
 ## Best Practices
 

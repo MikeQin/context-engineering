@@ -62,12 +62,12 @@ This represents the evolution from prompt engineering to systematic AI developme
 **🎮 [Tetris Game Demo](https://tetris-game-ruddy.vercel.app/)** - Complete implementation built using this framework, deployed and running live.
 
 ### Universal Applicability
-✅ Web Applications (Next.js, React, Vue)  
-✅ Mobile Applications (React Native, Flutter)  
-✅ APIs & Backend Services (FastAPI, Express)  
-✅ Desktop Applications (Electron, native)  
-✅ CLI Tools (Python, Node.js, Go, Rust)  
-✅ AI/ML Projects (Data science, ML models)
+✅ Web Applications (Next.js, React, Vue) - Full toolkit support  
+✅ APIs & Backend Services (FastAPI, Express) - Full toolkit support  
+✅ CLI Tools (Python Click/Typer, Node.js, Go, Rust) - Full toolkit support  
+✅ AI/ML Projects (Data science, ML models) - Full methodology support  
+🔄 Mobile Applications (React Native, Flutter) - Methodology support, toolkit enhancements planned  
+🔄 Desktop Applications (Electron, native) - Methodology support, toolkit enhancements planned
 
 ---
 
@@ -121,6 +121,13 @@ This represents the evolution from prompt engineering to systematic AI developme
 - Stakeholder review and approval processes
 - Enterprise-grade implementation standards
 
+### For CLI Applications (Hours-Days)
+- Use PRODUCT_PRP_CLI.md specialized template
+- Perfect for: Python CLI tools with Click/Typer, automation scripts, developer utilities
+- Command structure and argument parsing design
+- Configuration management and distribution planning
+- CLI-specific testing and user experience patterns
+
 ### For Organizations
 - Adopt framework across development teams
 - Create organization-specific templates and standards
@@ -172,6 +179,7 @@ This represents the evolution from prompt engineering to systematic AI developme
 ```
 📦 Context Engineering Framework
 ├── PRODUCT_PRP.md & PRODUCT_PRP_SLIM.md (Templates)
+├── PRODUCT_PRP_CLI.md (CLI application template)
 ├── CLAUDE.md (Development methodology)
 ├── install.sh (Automation installer)
 ├── generate_design command (Architecture generator)

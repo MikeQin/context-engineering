@@ -372,6 +372,9 @@ graph TD
 # New Next.js project
 /build --init --nextjs --tailwind --shadcn 
 
+# Python CLI application
+/build --python --cli --click --config
+
 # Feature development with TDD
 /build --feature --tdd --persona-frontend
 
@@ -384,7 +387,8 @@ graph TD
 - `--api` → Express + TypeScript + Auth + OpenAPI
 - `--fullstack` → React + Node.js + Docker
 - `--mobile` → React Native + Expo
-- `--cli` → Commander.js + Config + Testing
+- `--cli` → Python CLI with Click, Typer, or argparse
+- `--python` → Python project with CLI support
 
 **Build Modes**:
 - `--init` → New project with stack selection
@@ -720,6 +724,15 @@ graph TD
 /git --init --pre-commit                   # Git configuration
 ```
 
+### **🔧 Python CLI Development**
+```bash
+/dev-setup --type cli --python --tools     # CLI development environment
+/build --python --cli --click --config     # Create CLI with Click
+/test --cli --command-testing --integration # CLI testing
+/document --cli --help-generation --man-pages # CLI documentation
+/deploy --cli --pypi --env prod            # Deploy to PyPI
+```
+
 ### **🔍 Feature Development Workflow**
 ```bash
 /analyze --code --think --persona-architect    # Understand codebase
@@ -767,6 +780,9 @@ graph TD
 
 # UI development with testing
 /build --nextjs --tailwind --shadcn --pup --watch --persona-frontend
+
+# CLI development with testing
+/build --python --cli --typer --testing --persona-backend
 
 # Production deployment safety
 /scan --validate --seq → /deploy --env prod --think-hard

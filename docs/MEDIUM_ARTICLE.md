@@ -128,7 +128,9 @@ chmod +x install.sh && ./install.sh
 mkdir my-awesome-app && cd my-awesome-app
 cp ../framework/* .
 
-# Customize your requirements (edit PRODUCT_PRP.md)
+# Customize your requirements
+# For web apps: edit PRODUCT_PRP.md or PRODUCT_PRP_SLIM.md
+# For CLI tools: edit PRODUCT_PRP_CLI.md (Python Click/Typer support)
 # Generate your architecture
 /generate_design ./my-awesome-app/PRODUCT_PRP.md
 ```

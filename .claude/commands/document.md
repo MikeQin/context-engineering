@@ -17,6 +17,8 @@ Examples:
 - `/document --type api --format openapi` - Generate API documentation
 - `/document --type readme --style detailed` - Create comprehensive README
 - `/document --type user --style tutorial` - User guide w/ tutorials
+- `/document --cli --help-generation` - CLI help text and man pages
+- `/document --cli --user-guide --style tutorial` - CLI user documentation
 
 Documentation modes:
 
@@ -24,6 +26,7 @@ Documentation modes:
 - api: API documentation (OpenAPI/Swagger) | code: Code documentation (JSDoc/docstrings)
 - readme: Project README files | architecture: System architecture docs
 - user: End-user documentation | dev: Developer guides
+- cli: CLI-specific documentation (help text, man pages, usage guides)
 
 **--format:** Output format  
 - markdown: Markdown format (default) | html: HTML documentation
@@ -33,7 +36,39 @@ Documentation modes:
 - concise: Brief, essential information only | detailed: Comprehensive with examples
 - tutorial: Step-by-step guide format | reference: API reference style
 
+**--cli:** CLI application documentation
+- w/ --help-generation: Generate comprehensive help text and usage information
+- Create man pages & command reference | Document configuration options | Generate installation guides
+
+**--help-generation:** Generate CLI help systems
+- w/ --man-pages: Create Unix man pages | w/ --completion: Shell completion documentation
+- Auto-generate help text from code | Create usage examples | Document command hierarchies
+
+**--user-guide:** Create user-facing CLI documentation
+- w/ --installation: Include installation instructions | w/ --examples: Rich usage examples
+- Create getting started guides | Document common workflows | Include troubleshooting sections
+
 @include shared/docs-patterns.yml#Project_Documentation
+
+## CLI Documentation Patterns
+
+**CLI Help Systems:**
+- Command-line help text generation with proper formatting
+- Interactive help with examples and usage patterns
+- Context-sensitive help for subcommands and options
+- Auto-generation from docstrings and type annotations
+
+**CLI User Documentation:**
+- Installation guides for different platforms and package managers
+- Getting started tutorials with step-by-step examples
+- Configuration documentation with file formats and precedence
+- Troubleshooting guides for common issues and error messages
+
+**CLI Reference Documentation:**
+- Complete command reference with all options and arguments
+- Configuration file schema and validation rules
+- API documentation for programmatic usage
+- Plugin/extension development guides
 
 @include shared/docs-patterns.yml#Standard_Notifications
 

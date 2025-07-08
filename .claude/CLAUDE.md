@@ -1,6 +1,6 @@
 # CLAUDE.md - Comprehensive Claude Development Toolkit Configuration
 
-You are Claude with enhanced capabilities provided by the Comprehensive Claude Development Toolkit, a repository-based tool library that gives you access to 19 specialized development commands and modern Next.js + Tailwind CSS templates.
+You are Claude with enhanced capabilities provided by the Comprehensive Claude Development Toolkit, a repository-based tool library that gives you access to 19 specialized development commands, modern Next.js + Tailwind CSS templates, and Python CLI application patterns.
 
 ## How the Comprehensive Claude Development Toolkit Works
 
@@ -26,14 +26,16 @@ When Claude Code detects this `.claude/CLAUDE.md` file, you automatically gain a
 With claude-tools loaded, you can:
 
 1. **Generate Modern Components**: Create production-ready Next.js + Tailwind components instantly
-2. **Use Specialized Commands**: Access 19 domain-specific development tools
-3. **Apply Cognitive Personas**: Switch between 9 different thinking modes
-4. **Access Template Library**: Use pre-built, accessible, TypeScript-ready templates
-5. **Provide Zero-Cost UI Generation**: No external service dependencies
+2. **Generate CLI Applications**: Create Python CLI tools with Click, Typer, or argparse frameworks
+3. **Use Specialized Commands**: Access 19 domain-specific development tools
+4. **Apply Cognitive Personas**: Switch between 9 different thinking modes
+5. **Access Template Library**: Use pre-built, accessible, TypeScript-ready templates and CLI patterns
+6. **Provide Zero-Cost Development**: No external service dependencies for UI or CLI generation
 
 ### Command Usage Pattern
 Users can invoke your enhanced capabilities using command syntax like:
 - `/build --nextjs --tailwind --shadcn` (generates Next.js app with component library)
+- `/build --python --cli --click` (generates Python CLI with Click framework)
 - `/analyze --code --persona-architect` (analyzes code with systems thinking)
 - `/design --api --ddd --think-hard` (designs API with domain-driven approach)
 
@@ -129,6 +131,55 @@ You have direct access to the template library in `.claude/templates/nextjs-tail
 **Component Generator** (`generators/`):
 - `component-generator.js` - JavaScript class for dynamic component creation
 - Supports Button, Form, Card, Dashboard, and custom component generation
+
+## Python CLI Development Integration
+
+### CLI Application Development Stack
+**Primary Technologies:**
+- **Python + Click/Typer** - Modern CLI frameworks with type hints and decorators
+- **argparse** - Built-in Python CLI parsing for simple applications
+- **Rich/Colorama** - Enhanced terminal output and formatting
+- **ConfigParser/PyYAML** - Configuration file management
+- **Setuptools/Poetry** - Package distribution and dependency management
+
+### CLI Generation Capabilities
+**Command Structure Generation:**
+- Click-based CLI applications with subcommands and options
+- Typer applications with modern type hints and auto-completion
+- Configuration management with YAML/JSON/TOML support
+- Package structure with console entry points
+- Testing frameworks for CLI applications
+
+**CLI Templates:**
+- Python CLI project structures with proper packaging
+- Command-line argument parsing patterns
+- Configuration file handling templates
+- CLI testing strategies with mocks and fixtures
+- Distribution packages for PyPI and package managers
+
+### CLI Template System Usage
+You have access to CLI development patterns for:
+
+**Project Structures**:
+- Standard CLI package layout with `src/` structure
+- Command modules with subcommand organization
+- Configuration management with multiple sources
+- Proper `pyproject.toml` setup for modern Python packaging
+
+**CLI Patterns**:
+- Command-line argument parsing with validation
+- Configuration file loading with precedence
+- Error handling with proper exit codes
+- Progress indicators and user feedback
+- Testing patterns for CLI applications
+
+**Command Examples:**
+```bash
+# Generate CLI applications
+/build --python --cli --click    # CLI with Click framework
+/build --python --cli --typer    # CLI with Typer framework
+/build --python --cli --argparse # Basic CLI with argparse
+```
 
 ## Rules & Standards
 

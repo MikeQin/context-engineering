@@ -17,6 +17,8 @@ Examples:
 - `/design --api --think` - REST API design w/ patterns
 - `/design --ddd --think-hard` - Deep domain modeling
 - `/design --api --ddd --ultrathink` - Complete system architecture
+- `/design --cli --command-architecture` - CLI command structure design
+- `/design --cli --config-management` - CLI configuration system design
 
 Design modes:
 
@@ -32,6 +34,14 @@ Design modes:
 - w/ --template: Use template (feature/api/integration/migration)
 - Include user stories w/ acceptance criteria | Define success metrics & timelines | Document tech requirements
 
+**--cli:** Design CLI application architecture
+- w/ --command-architecture: Plan command structure, subcommands, and argument hierarchy
+- Design configuration system w/ file/env var precedence | Plan user interaction flows | Design help & documentation system
+
+**--config-management:** Design configuration systems
+- w/ --precedence: Define configuration source priority (files/env vars/defaults)
+- Design schema validation & error handling | Plan configuration discovery & loading | Design user customization patterns
+
 ## Design Patterns
 
 @include shared/architecture-patterns.yml#API_Design_Patterns
@@ -42,7 +52,7 @@ Design modes:
 
 ## Integration & Best Practices
 
-Combined modes: API+DDD: Design domain-driven APIs | API+PRD: Create API product requirements | DDD+PRD: Document domain-driven architecture | All three: Complete system design
+Combined modes: API+DDD: Design domain-driven APIs | API+PRD: Create API product requirements | DDD+PRD: Document domain-driven architecture | CLI+PRD: Design CLI product requirements | All modes: Complete system design
 
 Best practices: Start w/ user needs & business goals | Design→change & evolution | Consider non-functional early | Document decisions & rationale | Include examples & diagrams | Plan→testing & monitoring
 

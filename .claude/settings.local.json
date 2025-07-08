@@ -9,7 +9,9 @@
       "Bash(diff:*)",
       "Bash(rm:*)",
       "Bash(rg:*)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(chmod:*)",
+      "Bash(ls:*)"
     ],
     "deny": []
   }

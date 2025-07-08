@@ -16,7 +16,7 @@ Create or run comprehensive test suites for code specified in $ARGUMENTS using m
 Examples:
 - `/test --tdd` - Test-driven development workflow
 - `/test --coverage` - Generate coverage report
-- `/test --watch` - Continuous test mode
+- `/test --cli --command-testing` - CLI command interaction testing
 - `/test --integration` - Run integration tests
 - `/test --e2e` - Run end-to-end tests
 
@@ -32,6 +32,10 @@ Examples:
 --bail: "Stop on first test failure"
 --parallel: "Run tests in parallel workers"
 --update-snapshots: "Update all snapshot tests"
+--cli: "CLI application testing mode"
+--command-testing: "Test CLI command interactions and outputs"
+--cli-args: "Test command-line argument parsing and validation"
+--cli-integration: "Test CLI with real subprocess execution"
 
 ## Testing Approaches
 
@@ -42,6 +46,8 @@ Examples:
 **E2E Testing:** Full user workflows | Browser automation | Real environment | Critical path coverage
 
 **TDD Workflow:** Red→Green→Refactor cycle | Write minimal code | Comprehensive coverage | Design emergence
+
+**CLI Testing:** Command interaction tests | Argument parsing validation | Exit code verification | Output format testing
 
 ## Testing Patterns
 
@@ -55,13 +61,37 @@ Examples:
 - Mirror source structure in test directories
 - Group by feature or component
 
+## CLI Testing Patterns
+
+**CLI Test Structure:**
+- `tests/test_cli.py` - Main CLI interface testing
+- `tests/test_commands/` - Individual command testing
+- `tests/fixtures/` - Test data and configuration files
+- `tests/integration/` - CLI integration testing
+
+**CLI Testing Strategies:**
+- Click CliRunner for isolated command testing
+- Subprocess testing for real CLI execution
+- Mock external dependencies and file systems
+- Test argument parsing and validation
+- Verify exit codes and error messages
+- Test configuration loading and precedence
+
+**CLI Test Patterns:**
+- Test help text and usage information
+- Test command combinations and option flags
+- Test with various input formats and edge cases
+- Test interactive prompts and user input
+- Test output formatting (JSON, table, plain text)
+- Test error handling and recovery scenarios
+
 @include shared/quality-patterns.yml#Test_Quality_Standards
 
 ## Framework Support
 
 **JavaScript/TypeScript:** Jest (default) | Mocha + Chai | Vitest | Testing Library
 
-**Python:** pytest (default) | unittest | nose2 | doctest
+**Python:** pytest (default) | unittest | nose2 | doctest | Click testing utilities
 
 **Go:** Built-in testing | Testify | Ginkgo/Gomega
 

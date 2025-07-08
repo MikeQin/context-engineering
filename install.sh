@@ -57,6 +57,57 @@ if [[ -f "$COMMANDS_DIR/$GENERATE_COMMAND" ]] && [[ -f "$COMMANDS_DIR/$EXECUTE_C
     echo "📚 Individual command usage:"
     echo "  /generate_design [PRP_FILE]     # Generate technical architecture"
     echo "  /execute_project [PROJECT_DIR]  # Implement complete project"
+    echo ""
+    echo "🔧 MCP Server Integration (Optional):"
+    echo "For enhanced capabilities, install MCP servers:"
+    echo ""
+    
+    # Ask user if they want to install MCP servers
+    read -p "Do you want to install MCP servers for enhanced capabilities? (y/n): " -n 1 -r
+    echo ""
+    
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        echo "Installing MCP servers..."
+        echo ""
+        
+        # Function to install MCP server
+        install_mcp_server() {
+            local server_name="$1"
+            local server_command="$2"
+            
+            echo "Installing $server_name MCP server..."
+            if eval "$server_command"; then
+                echo "✅ $server_name MCP server installed successfully"
+            else
+                echo "⚠️  $server_name MCP server installation failed (optional)"
+            fi
+            echo ""
+        }
+        
+        # Install Context7 MCP server
+        install_mcp_server "context7" "claude mcp add --transport http context7 https://mcp.context7.com/mcp"
+        
+        # Install Sequential-thinking MCP server
+        install_mcp_server "sequential-thinking" "claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking"
+        
+        # Install Puppeteer MCP server
+        install_mcp_server "puppeteer" "claude mcp add puppeteer npx @modelcontextprotocol/server-puppeteer"
+        
+        echo "🎉 MCP servers installation completed!"
+    else
+        echo "⏭️  Skipping MCP servers installation"
+        echo ""
+        echo "You can install them later using these commands:"
+        echo ""
+        echo "# Add context7 mcp server integration"
+        echo "claude mcp add --transport http context7 https://mcp.context7.com/mcp"
+        echo ""
+        echo "# Add sequential-thinking mcp server integration"
+        echo "claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking"
+        echo ""
+        echo "# Add puppeteer mcp server integration"
+        echo "claude mcp add puppeteer npx @modelcontextprotocol/server-puppeteer"
+    fi
 else
     echo "❌ Installation failed - command files not found after copy"
     exit 1
