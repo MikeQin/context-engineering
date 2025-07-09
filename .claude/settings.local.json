@@ -11,7 +11,10 @@
       "Bash(rg:*)",
       "WebFetch(domain:github.com)",
       "Bash(chmod:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(dos2unix:*)",
+      "Bash(sed:*)",
+      "Bash(./toolkit/install_all.sh:*)"
     ],
     "deny": []
   }
