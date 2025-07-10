@@ -118,7 +118,7 @@ Ready to transform your AI development process? Here's your roadmap:
 git clone https://github.com/MikeQin/context-engineering.git
 cd context-engineering
 
-# Install the commands
+# Install MCP servers (optional for enhanced features)
 chmod +x install.sh && ./install.sh
 ```
 

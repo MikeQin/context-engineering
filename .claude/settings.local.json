@@ -14,7 +14,12 @@
       "Bash(ls:*)",
       "Bash(dos2unix:*)",
       "Bash(sed:*)",
-      "Bash(./toolkit/install_all.sh:*)"
+      "Bash(./toolkit/install_all.sh:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(/generate_design REPO_ANALYZER_PRP.md)",
+      "Bash(true)"
     ],
     "deny": []
   }

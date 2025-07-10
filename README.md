@@ -130,18 +130,18 @@ cp ../framework/* .
 - **For Complex Projects**: Customize `PRODUCT_PRP.md` with your requirements
 - **For Simple Projects**: Customize `PRODUCT_PRP_SLIM.md` with your requirements
 - **For CLI Applications**: Customize `PRODUCT_PRP_CLI.md` with your command-line tool requirements
-- **Study the Example**: Review [`../example/TETRIS_PRP.md`](./example/TETRIS_PRP.md) to see the framework in action
+- **Study the Example**: Review [`../examples/web-app/TETRIS_PRP.md`](./examples/web-app/TETRIS_PRP.md) to see the framework in action
 
-### Step 5: **Install the Commands (Optional)**
+### Step 5: **Install MCP Servers (Optional but Recommended)**
 ```bash
-# From the framework root directory
+# Install MCP servers for enhanced framework capabilities
 chmod +x install.sh
 ./install.sh
 ```
 
-This will install the framework commands and optionally configure MCP servers for enhanced capabilities.
+This installs MCP servers for enhanced capabilities. **Framework commands are automatically available** - no copying required!
 
-**Note:** MCP integration provides access to advanced features like library documentation (Context7), multi-step reasoning (Sequential), and browser automation (Puppeteer) for enhanced development capabilities.
+**Note:** MCP integration provides access to advanced features like library documentation (Context7), multi-step reasoning (Sequential), and browser automation (Puppeteer). Commands work immediately after cloning the repository.
 
 ### Step 7: **Generate Your Architecture**
 ```bash
@@ -171,7 +171,7 @@ Your product is now production-ready:
 **Option A: Use Claude CLI Command (Recommended)**
 ```bash
 /generate_design                    # Uses PRODUCT_PRP.md or PRODUCT_PRP_SLIM.md
-/generate_design ./example/TETRIS_PRP.md      # Uses specific PRP file
+/generate_design ./examples/web-app/TETRIS_PRP.md      # Uses specific PRP file
 /generate_design ./path/to/PRP.md   # Uses PRP file from any location
 ```
 
@@ -230,9 +230,8 @@ context-engineering/                 # Clone this repository
 ├── LICENSE                      # MIT License
 ├── CODE_OF_CONDUCT.md           # Community guidelines
 ├── VERSION                      # Framework version (1.0.0)
-├── install.sh                  # Simple installer for framework commands
+├── install.sh                  # MCP server installer (optional but recommended)
 ├── toolkit/                    # Internal toolkit documentation
-│   ├── install_all.sh          # Complete installation script (internal use)
 │   ├── README.md               # Comprehensive toolkit guide
 │   ├── ARCHITECTURE.md         # Technical architecture
 │   └── TUTORIAL.md             # Complete commands tutorial
@@ -261,7 +260,6 @@ context-engineering/                 # Clone this repository
 │           ├── patterns/       # Tailwind utility patterns
 │           └── generators/     # Component generation logic
 ├── toolkit/                    # Internal toolkit documentation
-│   ├── install_all.sh          # Complete installation script (internal use)
 │   ├── README.md               # Comprehensive toolkit guide
 │   ├── ARCHITECTURE.md         # Technical architecture
 │   └── TUTORIAL.md             # Complete commands tutorial
@@ -273,7 +271,7 @@ context-engineering/                 # Clone this repository
 │   ├── PRODUCT_PRP.md          # Enterprise template for complex projects
 │   ├── PRODUCT_PRP_SLIM.md     # Slim template for simple apps & quick builds
 │   └── CLAUDE.md               # Development methodology and standards
-├── example/                    # Real-world example implementation
+├── examples/                    # Real-world example implementation
 │   ├── TETRIS_PRP.md           # Tetris game requirements example
 │   ├── CLAUDE.md               # Development methodology (same as framework)
 │   └── TETRIS_GAME_DESIGN.md   # Generated architecture example
@@ -302,8 +300,8 @@ context-engineering/                 # Clone this repository
 - **[toolkit/TUTORIAL.md](./toolkit/TUTORIAL.md)** - Complete tutorial for all commands, personas, and workflows
 
 **Examples and Setup:**
-- **[example/TETRIS_PRP.md](./example/TETRIS_PRP.md)** - Real example showing how to use the enterprise template
-- **[install.sh](./install.sh)** - Simple installer for the framework commands
+- **[examples/web-app/TETRIS_PRP.md](./examples/web-app/TETRIS_PRP.md)** - Real example showing how to use the enterprise template
+- **[install.sh](./install.sh)** - MCP server installer for enhanced capabilities
 
 ### External Live Implementation:
 - **🎮 [Live Tetris Demo](https://tetris-game-ruddy.vercel.app/)** - Working game built using this framework
@@ -317,8 +315,8 @@ context-engineering/                 # Clone this repository
    - **Simple Projects**: Use [`framework/PRODUCT_PRP_SLIM.md`](./framework/PRODUCT_PRP_SLIM.md) for quick builds
    - **Complex Projects**: Use [`framework/PRODUCT_PRP.md`](./framework/PRODUCT_PRP.md) for enterprise requirements
    - **CLI Applications**: Use [`framework/PRODUCT_PRP_CLI.md`](./framework/PRODUCT_PRP_CLI.md) for command-line tools
-3. **See It In Action**: Review [`example/TETRIS_PRP.md`](./example/TETRIS_PRP.md) as a working example
-4. **Install Commands**: Run [`install.sh`](./install.sh) for easier DESIGN.md generation
+3. **See It In Action**: Review [`examples/web-app/TETRIS_PRP.md`](./examples/web-app/TETRIS_PRP.md) as a working example
+4. **Install MCP Servers**: Run [`install.sh`](./install.sh) for enhanced capabilities (optional)
 5. **Set Standards**: Use [`framework/CLAUDE.md`](./framework/CLAUDE.md) for development methodology
 6. **Practice**: Apply the framework to your own projects
 
@@ -344,8 +342,8 @@ context-engineering/                 # Clone this repository
 **Explore the Implementation**:
 - **🎮 [Live Demo](https://tetris-game-ruddy.vercel.app/)** - Play the working game
 - **📂 [Source Code](https://github.com/MikeQin/tetris-game)** - Complete implementation repository
-- **📋 [Requirements](./example/TETRIS_PRP.md)** - The PRP that built this game
-- **🛠️ [Methodology](./example/CLAUDE.md)** - Development standards used
+- **📋 [Requirements](./examples/web-app/TETRIS_PRP.md)** - The PRP that built this game
+- **🛠️ [Methodology](./examples/web-app/CLAUDE.md)** - Development standards used
 
 ## 🎯 Framework Versatility
 
@@ -370,7 +368,7 @@ The Three-Document Pattern Context Engineering Framework adapts to any project s
 - **Features**: Command structure, argument parsing, configuration management, distribution
 
 ### **For Learning & Examples**
-- **Use**: [`example/TETRIS_PRP.md`](./example/TETRIS_PRP.md)
+- **Use**: [`examples/web-app/TETRIS_PRP.md`](./examples/web-app/TETRIS_PRP.md)
 - **Perfect For**: Understanding the framework, seeing real implementation
 - **Features**: Complete working example with actual code
 - **🎮 Live Demo**: [Play the Tetris Game](https://tetris-game-ruddy.vercel.app/)
@@ -426,7 +424,7 @@ Getting started requires these simple steps:
 
 ### **Learning Path**
 1. **Clone the framework**: `git clone [repo-url]` 
-2. **Study [`example/TETRIS_PRP.md`](./example/TETRIS_PRP.md)** to see framework in action
+2. **Study [`examples/web-app/TETRIS_PRP.md`](./examples/web-app/TETRIS_PRP.md)** to see framework in action
 3. **Play the [Live Demo](https://tetris-game-ruddy.vercel.app/)** to see the end result
 4. **Explore the [Source Code](https://github.com/MikeQin/tetris-game)** to understand the implementation
 5. **Create your first project**: `mkdir my-first-app && cd my-first-app && cp ../framework/* .`

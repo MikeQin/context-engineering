@@ -28,7 +28,7 @@ A modern configuration framework that enhances Claude Code with Next.js + Tailwi
 - **9 Cognitive Personas** for domain-specific approaches
 - **Next.js + Tailwind CSS Templates** for modern web development
 - **Python CLI Application Patterns** for command-line tool development
-- **Zero External Dependencies** for UI and CLI generation
+- **Minimal External Dependencies** (requires MCP servers for full functionality)
 - **Evidence-Based Methodology** encouraging documentation
 - **MCP Integration** with Context7, Sequential, Puppeteer
 - **Git Checkpoint Support** for safe experimentation

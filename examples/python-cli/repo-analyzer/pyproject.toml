@@ -1,0 +1,143 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-analyzer"
+version = "1.0.0"
+description = "Comprehensive repository analysis tool for code quality, patterns, dependencies, and metrics"
+authors = [
+    {name = "Context Engineering Framework", email = "framework@example.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["code-analysis", "static-analysis", "quality", "metrics", "cli"]
+
+dependencies = [
+    "click>=8.0.0",          # CLI framework
+    "rich>=13.0.0",          # Terminal formatting and progress bars
+    "pyyaml>=6.0.0",         # Configuration file parsing
+    "gitpython>=3.1.0",      # Git repository interaction
+    "jsonschema>=4.0.0",     # Configuration validation
+    "sqlalchemy>=2.0.0",     # Database ORM
+    "jinja2>=3.1.0",         # HTML report templating
+    "toml>=0.10.0",          # TOML configuration support
+    "pathspec>=0.11.0",      # gitignore pattern matching
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",        # Testing framework
+    "pytest-cov>=4.0.0",    # Coverage reporting
+    "pytest-asyncio>=0.21.0", # Async testing support
+    "black>=23.0.0",        # Code formatting
+    "ruff>=0.1.0",          # Fast linting and formatting
+    "mypy>=1.0.0",          # Static type checking
+    "pre-commit>=3.0.0",    # Git hooks for quality
+]
+
+[project.scripts]
+repo-analyzer = "repo_analyzer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/context-engineering/repo-analyzer"
+Documentation = "https://repo-analyzer.readthedocs.io"
+Repository = "https://github.com/context-engineering/repo-analyzer"
+Issues = "https://github.com/context-engineering/repo-analyzer/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+target-version = "py38"
+line-length = 88
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.mypy]
+python_version = "3.8"
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 90
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]

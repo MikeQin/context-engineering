@@ -1,0 +1,142 @@
+# Token-Saving Patterns Configuration
+# Universal token optimization patterns for all framework commands
+
+## Token_Saving_Modes
+
+Standard_Mode:
+  Description: "Default verbose output with explanations"
+  Token_Usage: "100% (baseline)"
+  Use_Case: "Learning, detailed analysis, comprehensive documentation"
+
+Token_Saving_Mode:
+  Flag: "--token-saving | --uc"
+  Description: "Balanced compression maintaining quality"
+  Token_Reduction: "50-70%"
+  Patterns:
+    Structure: "Organized sections, minimal prose"
+    Code: "Essential implementation, key comments only"
+    Explanations: "Bullet points vs. paragraphs"
+    Examples: "Core examples only"
+  Use_Case: "Production development, efficient iteration"
+
+Minimal_Mode:
+  Flag: "--minimal"
+  Description: "Maximum compression, symbol-based communication"
+  Token_Reduction: "70-85%"
+  Patterns:
+    Structure: "Symbol notation (→|&|:|»)"
+    Code: "Code only, no comments"
+    Explanations: "Compressed bullets"
+    Examples: "Single core example"
+  Use_Case: "Rapid prototyping, token budget constraints"
+
+## Symbol_Mapping
+
+Communication_Symbols:
+  "→": "leads to, results in"
+  "|": "separator, options"
+  "&": "combine, and"
+  ":": "define, explanation"
+  "»": "sequence, flow"
+  "✅": "completed, success"
+  "⚠️": "warning, attention"
+  "🔧": "implementation, code"
+  "📊": "data, metrics"
+
+Structure_Symbols:
+  "├──": "directory structure"
+  "└──": "end of branch"
+  "│": "continuation"
+  "█": "progress indicator"
+  "▓": "partial completion"
+
+## Compression_Techniques
+
+Code_Compression:
+  Comments: "Essential only | No explanatory comments"
+  Documentation: "Minimal docstrings | Core functionality descriptions"
+  Examples: "Single representative example per feature"
+  Error_Handling: "Basic patterns | No verbose error messages"
+
+Content_Compression:
+  Prose_Reduction: "Bullet points → structured lists → symbols"
+  Redundancy_Elimination: "No repetitive explanations"
+  Reference_System: "Use @include for shared content"
+  Template_Reuse: "Leverage existing patterns vs. generation"
+
+Output_Compression:
+  Progress_Reports: "Symbol-based status updates"
+  File_Generation: "Essential files only"
+  Validation: "Core checks only"
+  Summary: "Key metrics in table format"
+
+## Usage_Guidelines
+
+When_To_Use_Token_Saving:
+  Large_Projects: "Multi-file implementations"
+  Iterative_Development: "Rapid prototyping cycles"
+  Budget_Constraints: "Token usage limitations"
+  Production_Focus: "Implementation over explanation"
+
+When_To_Use_Standard:
+  Learning: "Understanding framework concepts"
+  Documentation: "Comprehensive project documentation"
+  Complex_Analysis: "Deep architectural decisions"
+  First_Time_Users: "Framework familiarization"
+
+## Implementation_Examples
+
+Token_Saving_Design_Output:
+  Structure: |
+    # ProjectName DESIGN
+    
+    ## Architecture
+    Stack: NextJS|Tailwind|PostgreSQL
+    Pattern: MVC → API → DB
+    
+    ## Structure
+    ```
+    src/
+    ├── components/
+    ├── pages/
+    └── utils/
+    ```
+    
+    ## Dependencies
+    - next: 13.5+
+    - tailwind: 3.3+
+    - postgres: 15+
+
+Minimal_Design_Output:
+  Structure: |
+    # ProjectName DESIGN
+    
+    Stack: NextJS|Tailwind|PG
+    Pattern: MVC→API→DB
+    
+    ```
+    src/
+    ├── components/
+    ├── pages/
+    └── utils/
+    ```
+    
+    Deps: next@13.5+|tailwind@3.3+|pg@15+
+
+## Flag_Inheritance
+
+Universal_Flags:
+  "--token-saving": "Available on ALL framework commands"
+  "--minimal": "Available on ALL framework commands"
+  "--verbose": "Default mode for ALL commands"
+
+Command_Specific:
+  "/generate_design":
+    - "--scaffold": "Structure only, no detailed sections"
+  "/execute_project":
+    - "--core": "Essential functionality only"
+    - "--scaffold": "Project structure without implementation"
+  "/analyze":
+    - "--summary": "Key metrics only"
+  "/build":
+    - "--basic": "Minimal viable implementation"

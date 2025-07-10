@@ -38,7 +38,7 @@ This represents the evolution from prompt engineering to systematic AI developme
 
 ### Automated Tools
 
-**One-Line Installation:**
+**One-Line MCP Setup (Optional):**
 ```bash
 ./install.sh
 ```
@@ -110,7 +110,7 @@ This represents the evolution from prompt engineering to systematic AI developme
 ### For Simple Projects (1-5 days)
 - Use PRODUCT_PRP_SLIM.md template
 - Perfect for: Todo apps, prototypes, learning projects
-- Install automation tools with `./install.sh`
+- Install MCP servers with `./install.sh` (optional for enhanced features)
 - Generate architecture with `/generate_design`
 - Start building with systematic methodology
 
@@ -181,14 +181,14 @@ This represents the evolution from prompt engineering to systematic AI developme
 ├── PRODUCT_PRP.md & PRODUCT_PRP_SLIM.md (Templates)
 ├── PRODUCT_PRP_CLI.md (CLI application template)
 ├── CLAUDE.md (Development methodology)
-├── install.sh (Automation installer)
+├── install.sh (MCP server installer - optional)
 ├── generate_design command (Architecture generator)
 └── Complete Tetris example with source code
 ```
 
 **Quick Start (5 minutes):**
 1. Choose template based on project complexity
-2. Install automation tools: `./install.sh`
+2. Install MCP servers: `./install.sh` (optional)
 3. Fill requirements in chosen template
 4. Generate architecture: `/generate_design`
 5. Begin systematic implementation

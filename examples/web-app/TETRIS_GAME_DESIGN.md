@@ -1,6 +1,6 @@
 # TETRIS_GAME_DESIGN.md - Tetris Game Technical Architecture
 
-> **Generated using**: `/generate_design ./example/TETRIS_PRP.md`  
+> **Generated using**: `/generate_design ./examples/TETRIS_PRP.md`  
 > **Product Name**: `Tetris Game` (extracted from PRP)  
 > **Framework**: The Three-Document Pattern Context Engineering Framework  
 > **Source Requirements**: [TETRIS_PRP.md](./TETRIS_PRP.md)  

@@ -167,7 +167,7 @@ Please create a subfolder named `tetris-game` to contain all code and artifacts 
 
 **Option A: Claude CLI Command (Recommended)**
 ```bash
-/generate_design ./example/TETRIS_PRP.md
+/generate_design ./examples/TETRIS_PRP.md
 ```
 
 **Option B: Manual AI Prompt**
@@ -187,7 +187,7 @@ I have created a PRODUCT_PRP.md file with my project requirements and I'm using 
 
 Please ensure the DESIGN.md follows the architecture patterns and quality standards defined in CLAUDE.md, and fully addresses all requirements specified in PRODUCT_PRP.md.
 
-Lastly, save the generated file as 'TETRIS_GAME_DESIGN.md' in the current directory (./example/).
+Lastly, save the generated file as 'TETRIS_GAME_DESIGN.md' in the current directory (./examples/).
 ```
 
 3. **Review the generated `DESIGN.md`** for Architecture & Implementation (Technical Design) ensuring it includes:
@@ -219,7 +219,7 @@ Lastly, save the generated file as 'TETRIS_GAME_DESIGN.md' in the current direct
 
 ```mermaid
 graph TD
-    A["📋 TETRIS_PRP.md<br/>(Product Requirements)"] --> B["🔧 /generate_design<br/>./example/TETRIS_PRP.md"]
+    A["📋 TETRIS_PRP.md<br/>(Product Requirements)"] --> B["🔧 /generate_design<br/>./examples/TETRIS_PRP.md"]
     B --> C["📐 AI Generates<br/>TETRIS_GAME_DESIGN.md"]
     C --> D["👥 Review & Approve<br/>Technical Architecture"]
     D --> E["🚀 /execute_project<br/>./tetris-game"]

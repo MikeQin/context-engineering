@@ -5,12 +5,36 @@ Execute the complete implementation of your project using The Three-Document Pat
 ## Usage
 
 ```bash
-/execute_project [PROJECT_FOLDER]
+/execute_project [OPTIONS] [PROJECT_FOLDER]
 ```
 
 ## Parameters
 
 - `PROJECT_FOLDER` (optional): Path to the project folder containing your three framework documents. Defaults to current directory.
+
+## Options
+
+- `--token-saving` or `--uc`: Enable UltraCompressed mode for efficient implementation
+- `--minimal`: Maximum compression with essential code only  
+- `--verbose`: Detailed implementation with explanations (default)
+- `--scaffold`: Generate project structure only
+- `--core`: Implement core functionality only
+
+## Token-Saving Mode
+
+When `--token-saving` is used, the command generates:
+- Essential code files only (no extensive examples)
+- Minimal comments and documentation
+- Core functionality without advanced features
+- Optimized file structure
+- Symbol-based progress reporting
+
+Example:
+```bash
+/execute_project --token-saving ./my-project
+/execute_project --minimal ./my-project  
+/execute_project --scaffold ./my-project  # Structure only
+```
 
 ## Description
 
