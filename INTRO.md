@@ -226,6 +226,7 @@ Teams naturally evolve through the optimization levels:
 **Download the Framework:**
 ```
 📦 Context Engineering Framework
+Repository: https://github.com/MikeQin/context-engineering
 ├── PRODUCT_PRP.md & PRODUCT_PRP_SLIM.md (Templates)
 ├── PRODUCT_PRP_CLI.md (CLI application template)
 ├── CLAUDE.md (Development methodology)
@@ -236,16 +237,18 @@ Teams naturally evolve through the optimization levels:
 ```
 
 **Quick Start (5 minutes):**
-1. Install MCP servers: `./install.sh` (optional) in terminal
-2. Create project folder: `mkdir my-project`
-3. Copy templates: `cp ./framework/* ./my-project`
-4. Enter `claude` code mode
-5. Choose `./my-project/PRODUCT_PRP.md` template based on project complexity
-6. Fill requirements in chosen `./my-project/PRODUCT_PRP.md` template
-7. Generate architecture: `/generate_design --token-saving ./my-project/PRODUCT_PRP.md`
-8. Execute implementation: `/execute_project --token-saving ./my-project`
-9. Begin systematic implementation
-10. Validate and test the product
+1. **Clone the framework**: `git clone https://github.com/MikeQin/context-engineering.git`
+2. **Enter the directory**: `cd context-engineering`
+3. Install MCP servers: `./install.sh` (optional) in terminal
+4. Create project folder: `mkdir my-project`
+5. Copy templates: `cp ./framework/* ./my-project`
+6. Enter `claude` code mode
+7. Choose `./my-project/PRODUCT_PRP.md` template based on project complexity
+8. Fill requirements in chosen `./my-project/PRODUCT_PRP.md` template
+9. Generate architecture: `/generate_design --token-saving ./my-project/PRODUCT_PRP.md`
+10. Execute implementation: `/execute_project --token-saving ./my-project`
+11. Begin systematic implementation
+12. Validate and test the product
 
 ### Framework Resources
 - **Complete Documentation** - Comprehensive guides and best practices
@@ -277,10 +280,13 @@ Transform software development from art to engineering science through systemati
 **Start building better software with systematic context engineering.**
 
 ### Choose Your Path:
-- **Individual Developers** - Download templates and start building
+- **Individual Developers** - Clone the framework: `git clone https://github.com/MikeQin/context-engineering.git`
 - **Development Teams** - Implement framework across projects
 - **Organizations** - Adopt systematic AI development standards
 - **Stakeholders** - Invest in proven AI development methodology
+
+### Get Started Now:
+**🔗 GitHub Repository**: https://github.com/MikeQin/context-engineering
 
 ### Results You Can Expect:
 ✅ Faster development cycles  
