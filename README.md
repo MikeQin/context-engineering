@@ -636,9 +636,9 @@ This project incorporates ideas and code patterns from open-source projects unde
 # Complete workflow for any project:
 git clone [repository-url]
 cd context-engineering
+# Create your project folder
 mkdir your-awesome-project
-cd your-awesome-project
-cp ../framework/* .
+cp ./framework/* ./your-awesome-project
 
 # Customize your templates, generate architecture, and execute
 # Choose your token-saving mode based on your needs:
