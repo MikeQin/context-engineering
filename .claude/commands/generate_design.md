@@ -2,6 +2,10 @@
 
 Generate a comprehensive DESIGN.md document from a PRODUCT_PRP.md file following The Three-Document Pattern Context Engineering Framework.
 
+## Universal Flags
+
+@include flag-inheritance.yml#Universal_Always
+
 ## Usage
 
 ```bash
@@ -98,61 +102,89 @@ Creates a `[PRODUCT_NAME]_DESIGN.md` file in the current directory with complete
 
 The command will efficiently execute using the new 19 internal commands:
 
-1. **Internal Configuration & Setup**
-   - **Read `.claude/CLAUDE.md`** - Load internal toolkit configuration and capabilities
-   - **Initialize internal tools** - Access 19 specialized commands and templates
-   - `/load` - Load project context and validate input files
-   - `/scan --validate` - Validate PRP and CLAUDE.md file formats
-   - `/analyze --code` - Parse PRP file and extract product name
+1. **Framework Initialization & Configuration Loading**
+   - **Read `.claude/CLAUDE.md`** - Load complete internal toolkit configuration (19 commands, personas, templates, token-saving modes, MCP integration)
+   - **Load shared configuration modules** - Import all @include references (toolkit-core.yml, toolkit-personas.yml, flag-inheritance.yml, etc.)
+   - **Initialize framework capabilities** - Activate 19 specialized commands, 9 cognitive personas, Next.js + Tailwind templates, Python CLI patterns
+   - **Apply universal flags** - Process all command flags including token-saving modes, thinking modes, persona selection, MCP controls
+   - **Read repository `CLAUDE.md`** - Load framework development context and consistency requirements
+   - `/load` - Load project context using framework-aware validation
+   - `/scan --validate` - Validate all framework documents using framework quality standards
 
-2. **Context Engineering Configuration**
-   - **Read project's `CLAUDE.md`** - Load context engineering methodology and standards
-   - **Merge configurations** - Combine internal toolkit with project methodology
-   - `/analyze --arch --think` - Analyze project requirements and constraints
-   - `/review --quality` - Review PRP completeness and clarity
-   - `/scan --security` - Identify security considerations from requirements
+2. **Project Context Engineering Integration**
+   - **Read project's `CLAUDE.md`** - Load Three-Document Pattern methodology, coding standards, and project-specific patterns
+   - **Validate framework compatibility** - Ensure project follows framework architecture patterns and quality standards
+   - **Merge framework configurations** - Combine internal toolkit + repository context + project methodology
+   - **Apply cognitive persona** - Use specified persona (--persona-architect, --persona-frontend, etc.) for domain-specific thinking
+   - **Configure MCP integration** - Apply MCP flags (--c7, --seq, --pup) for enhanced capabilities
+   - `/analyze --arch --think` - Analyze using framework thinking modes and architectural patterns
+   - `/review --quality --evidence` - Review using framework evidence-based methodology
+   - `/scan --security` - Apply framework security patterns and OWASP standards
 
-3. **Architecture Design**
-   - `/design --api --ddd` - Create system architecture and API design
-   - `/design --prd` - Generate product requirements analysis
-   - `/analyze --profile` - Assess performance and scalability needs
+3. **Framework-Driven Architecture Design**
+   - `/design --api --ddd --persona-architect` - Create system architecture using domain-driven design patterns
+   - `/design --prd --think-hard` - Generate comprehensive product requirements analysis
+   - `/analyze --profile --seq` - Assess performance using Sequential thinking for complex analysis
+   - **Apply framework architectural patterns** - Use modular configuration, command-based architecture, template-driven development
+   - **Integrate technology stack** - Apply framework standards for Next.js + Tailwind CSS, Python CLI, MCP integration
 
-4. **Technical Planning**
-   - `/estimate --detailed` - Create project estimation and timeline
-   - `/scan --deps` - Analyze external dependencies and integrations
-   - `/build --init` - Plan project structure and technology stack
+4. **Framework-Aligned Technical Planning**
+   - `/estimate --detailed --persona-architect` - Create project estimation using systems thinking
+   - `/scan --deps --c7` - Analyze dependencies using Context7 for library documentation
+   - `/build --init --nextjs --tailwind` - Plan project structure using framework templates and patterns
+   - **Apply framework quality standards** - Evidence-based methodology, zero dependencies, backward compatibility
+   - **Ensure cross-component validation** - Validate against framework consistency requirements
 
-5. **Documentation Generation**
-   - `/document` - Generate comprehensive DESIGN.md with all sections
-   - `/explain --depth expert` - Create technical diagrams and explanations
-   - `/review --evidence` - Validate design completeness and accuracy
+5. **Framework-Standard Documentation Generation**
+   - `/document --depth expert --visual` - Generate comprehensive DESIGN.md following framework documentation standards
+   - `/explain --depth expert --visual --persona-mentor` - Create technical diagrams with teaching/mentoring approach
+   - `/review --evidence --quality` - Validate design using framework evidence-based methodology
+   - **Apply framework output organization** - Follow framework documentation management standards
+   - **Ensure template synchronization** - Keep generated design aligned with framework templates
 
-6. **Quality Assurance**
-   - `/scan --strict` - Validate design against quality standards
-   - `/analyze --security` - Ensure security considerations are addressed
-   - `/task` - Create actionable implementation tasks and next steps
+6. **Framework Quality Assurance & Validation**
+   - `/scan --strict --security --owasp` - Validate against framework security patterns and standards
+   - `/analyze --security --persona-security` - Security-focused analysis using framework threat modeling
+   - `/task --feature --tdd` - Create implementation tasks following framework development practices
+   - **Validate framework compliance** - Ensure design follows framework architecture patterns and quality standards
+   - **Apply framework best practices** - Consider user impact, maintain template consistency, update documentation
 
 This systematic approach ensures comprehensive, high-quality DESIGN.md generation using the full capabilities of the specialized command toolkit.
 
 **Note:** The internal commands execute automatically and transparently. Users simply run `/generate_design` and Claude internally uses the appropriate specialized commands to deliver optimal results without requiring user awareness or intervention.
 
-## Dual Configuration System
+## Triple Configuration System
 
-This command operates with two complementary CLAUDE.md files:
+This command operates with three complementary CLAUDE.md files for complete framework integration:
 
 1. **`.claude/CLAUDE.md`** (Internal Toolkit Configuration)
-   - **Purpose**: Provides access to 19 specialized commands and Next.js + Tailwind templates
-   - **Source**: Based on SuperClaude project for enhanced Claude capabilities
-   - **Scope**: Internal tool library for efficient task execution
-   - **Usage**: Read first to initialize internal toolkit capabilities
+   - **Purpose**: Complete framework toolkit including 19 specialized commands, 9 cognitive personas, Next.js + Tailwind templates, Python CLI patterns, token-saving modes, MCP integration
+   - **Source**: Based on SuperClaude project enhanced for Context Engineering Framework
+   - **Scope**: Internal tool library providing all framework capabilities
+   - **Configuration**: All shared modules (toolkit-core.yml, toolkit-personas.yml, flag-inheritance.yml, etc.)
+   - **Usage**: Read first to initialize complete framework capabilities
 
-2. **Project's `CLAUDE.md`** (Context Engineering Methodology)  
-   - **Purpose**: Defines development methodology, coding standards, and project-specific patterns
-   - **Source**: Three-Document Pattern Context Engineering Framework
-   - **Scope**: Project-specific methodology and quality standards
-   - **Usage**: Read second to understand project's "HOW to build" requirements
+2. **Repository `CLAUDE.md`** (Framework Development Context)
+   - **Purpose**: Framework development methodology, consistency requirements, quality standards, architecture patterns
+   - **Source**: Context Engineering Framework repository knowledge base
+   - **Scope**: Framework maintenance and improvement guidelines
+   - **Standards**: Evidence-based methodology, zero dependencies, backward compatibility, cross-component validation
+   - **Usage**: Read to understand framework context and ensure consistency
 
-**Configuration Merge Process**: The command combines both configurations to leverage internal toolkit efficiency while adhering to project-specific methodology and standards.
+3. **Project's `CLAUDE.md`** (Three-Document Pattern Methodology)  
+   - **Purpose**: Project-specific implementation of Three-Document Pattern methodology, coding standards, token-saving guidelines
+   - **Source**: Framework template customized for specific project needs
+   - **Scope**: Project methodology aligned with framework standards
+   - **Integration**: Token-saving modes, architectural patterns, quality standards from framework
+   - **Usage**: Read to understand project's specific "HOW to build" requirements within framework context
+
+**Framework Integration Process**: The command systematically combines all three configuration layers to create complete framework-native operation:
+1. **Internal Toolkit Layer**: Provides core capabilities and tools
+2. **Framework Context Layer**: Ensures consistency and quality standards  
+3. **Project Methodology Layer**: Applies specific implementation requirements
+4. **Command Flag Override**: User-specified flags take precedence over all configuration defaults
+
+This triple-layer integration ensures every generated design is fully framework-compliant while meeting specific project needs.
 
 ## Quality Assurance
 

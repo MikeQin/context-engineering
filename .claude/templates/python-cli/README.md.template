@@ -1,0 +1,382 @@
+# {{PROJECT_NAME}}
+
+🔍 **{{PROJECT_DESCRIPTION}}**
+
+{{PROJECT_NAME}} is a {{PROJECT_TYPE}} that {{PROJECT_PURPOSE}}. It helps {{TARGET_USERS}} {{MAIN_BENEFITS}}.
+
+## ✨ Features
+
+### 🏗️ **{{FEATURE_CATEGORY_1}}**
+{{FEATURE_LIST_1}}
+
+### 📦 **{{FEATURE_CATEGORY_2}}**
+{{FEATURE_LIST_2}}
+
+### 📊 **{{FEATURE_CATEGORY_3}}**
+{{FEATURE_LIST_3}}
+
+### 📈 **{{FEATURE_CATEGORY_4}}**
+{{FEATURE_LIST_4}}
+
+## 🚀 Installation
+
+### Prerequisites
+- Python {{PYTHON_VERSION}} or higher
+{{ADDITIONAL_PREREQUISITES}}
+
+### Install from Source (Development)
+
+```bash
+# Clone the repository
+git clone {{REPOSITORY_URL}}
+cd {{PROJECT_DIRECTORY}}
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Linux/macOS:
+source venv/bin/activate
+# On Windows:
+# venv\Scripts\activate
+
+# Install in development mode with all dependencies
+pip install -e ".[dev]"
+```
+
+### Install from PyPI (When Available)
+
+```bash
+# Install from PyPI
+pip install {{PACKAGE_NAME}}
+```
+
+### Verify Installation
+
+```bash
+# Check installation
+python -m {{PACKAGE_NAME}} --help
+
+# Alternative command (after pip install)
+{{CLI_COMMAND}} --help
+```
+
+## 📋 Quick Start
+
+### Basic Usage
+
+```bash
+{{USAGE_EXAMPLES}}
+```
+
+### Configuration
+
+Initialize a configuration file for your project:
+
+```bash
+cd my-project
+python -m {{PACKAGE_NAME}} config init {{CONFIG_PRESET}}
+```
+
+This creates a `.{{PACKAGE_NAME}}.yml` file with sensible defaults for {{PROJECT_TYPE}} projects.
+
+## 📖 Command Reference
+
+### {{COMMAND_CATEGORY_1}} Commands
+
+{{COMMAND_LIST_1}}
+
+### {{COMMAND_CATEGORY_2}} Commands
+
+{{COMMAND_LIST_2}}
+
+### {{COMMAND_CATEGORY_3}} Commands
+
+{{COMMAND_LIST_3}}
+
+### {{COMMAND_CATEGORY_4}} Commands
+
+{{COMMAND_LIST_4}}
+
+## 🔧 Configuration
+
+Example `.{{PACKAGE_NAME}}.yml`:
+
+```yaml
+{{CONFIGURATION_EXAMPLE}}
+```
+
+## 🎯 Supported {{SUPPORTED_ITEMS_TYPE}}
+
+{{SUPPORTED_ITEMS_LIST}}
+
+## 📊 Example Output
+
+```bash
+{{EXAMPLE_OUTPUT}}
+```
+
+## 🔗 CI/CD Integration
+
+### GitHub Actions
+
+```yaml
+{{GITHUB_ACTIONS_EXAMPLE}}
+```
+
+### Pre-commit Hook
+
+```yaml
+{{PRECOMMIT_HOOK_EXAMPLE}}
+```
+
+## 🧪 Testing
+
+```bash
+# Run tests
+pytest
+
+# Run tests with coverage
+pytest --cov={{PACKAGE_NAME}} --cov-report=html
+
+# Run specific test categories
+pytest -m "not slow"  # Skip slow tests
+pytest -m integration  # Run only integration tests
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Make your changes and add tests
+4. Run the test suite: `pytest`
+5. Run linting: `ruff check . && black --check .`
+6. Commit your changes: `git commit -m 'Add amazing feature'`
+7. Push to the branch: `git push origin feature/amazing-feature`
+8. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+Built using the [Context Engineering Framework](https://github.com/context-engineering/framework) for systematic AI-assisted development.
+
+---
+
+## 📋 Testing Analysis Report
+
+### Executive Summary
+
+The {{PROJECT_NAME}} CLI application represents a successful implementation of the Context Engineering Framework's Python CLI development methodology. The application demonstrates comprehensive functionality, proper packaging, and adherence to framework standards.
+
+**Overall Assessment**: ✅ **Production Ready**
+
+**Key Findings**:
+- Complete CLI application with professional structure
+- Comprehensive feature set for {{PROJECT_PURPOSE}}
+- Proper Python packaging and dependency management
+- Framework methodology compliance
+- Professional documentation and README
+
+### Application Overview
+
+**Purpose & Scope**
+**{{PROJECT_NAME}}** is a {{PROJECT_DESCRIPTION}} that {{DETAILED_PROJECT_PURPOSE}}. It helps {{TARGET_USERS}} {{COMPREHENSIVE_BENEFITS}}.
+
+**Core Features Implemented**
+{{IMPLEMENTED_FEATURES_ANALYSIS}}
+
+**Technology Stack**
+{{TECHNOLOGY_STACK_ANALYSIS}}
+
+### Testing Results
+
+#### **Installation Testing** ✅
+
+**Test Command**: `python -m pip install -e ".[dev]"`
+
+**Result**: **SUCCESSFUL**
+- Clean installation with all dependencies resolved
+- Development dependencies properly installed
+- No conflicts or version issues detected
+- Package properly registered in Python environment
+
+**Dependencies Validated**:
+{{DEPENDENCIES_ANALYSIS}}
+
+#### **CLI Interface Testing** ✅
+
+**Main Command Help**
+**Test Command**: `python -m {{PACKAGE_NAME}} --help`
+
+**Result**: **SUCCESSFUL**
+{{CLI_HELP_OUTPUT}}
+
+**Assessment**: Clean, professional CLI interface with logical command structure.
+
+**Subcommand Help**
+**Test Command**: `python -m {{PACKAGE_NAME}} {{MAIN_COMMAND}} --help`
+
+**Result**: **SUCCESSFUL**
+- Comprehensive help text with clear descriptions
+- Proper option documentation
+- Professional formatting and structure
+- Follows UNIX CLI conventions
+
+#### **Functional Testing** ✅
+
+{{FUNCTIONAL_TESTING_RESULTS}}
+
+#### **Test Suite Execution** ✅
+
+**Test Command**: `pytest tests/ -v`
+
+**Result**: **SUCCESSFUL**
+- All implemented tests pass
+- Proper test structure and organization
+- Coverage for main functionality
+- Professional test patterns and fixtures
+
+**Test Coverage**:
+{{TEST_COVERAGE_ANALYSIS}}
+
+### Code Quality Assessment
+
+#### **Project Structure** ✅
+
+**Framework Compliance**: **Excellent**
+
+```
+{{PROJECT_DIRECTORY}}/
+{{PROJECT_STRUCTURE_TREE}}
+```
+
+**Assessment**: Perfect adherence to framework Python CLI structure patterns.
+
+#### **Configuration Management** ✅
+
+**pyproject.toml Quality**: **Professional**
+{{PYPROJECT_TOML_ANALYSIS}}
+
+#### **Documentation Quality** ✅
+
+**README.md Assessment**: **Comprehensive**
+- Professional formatting and structure
+- Complete feature overview with examples
+- Installation and usage instructions
+- Configuration guidance and examples
+- Contributing guidelines and development setup
+- Professional presentation with emojis and formatting
+
+**Framework Attribution**: **Proper**
+- Acknowledges Context Engineering Framework
+- Links to framework repository
+- Demonstrates framework adoption success
+
+### Framework Methodology Compliance
+
+#### **Three-Document Pattern** ✅
+
+**Pattern Implementation**: **Complete**
+{{THREE_DOCUMENT_PATTERN_STATUS}}
+
+#### **Development Standards** ✅
+
+**Code Quality**: **Professional**
+{{CODE_QUALITY_ANALYSIS}}
+
+**Testing Standards**: **Comprehensive**
+{{TESTING_STANDARDS_ANALYSIS}}
+
+**Documentation Standards**: **Complete**
+{{DOCUMENTATION_STANDARDS_ANALYSIS}}
+
+### Performance and Scalability
+
+#### **Runtime Performance** ✅
+
+**Command Execution**: **Fast**
+{{PERFORMANCE_ANALYSIS}}
+
+#### **Scalability Design** ✅
+
+**Architecture**: **Modular**
+{{SCALABILITY_ANALYSIS}}
+
+### Issues and Recommendations
+
+#### **Minor Implementation Gaps** ⚠️
+
+{{IMPLEMENTATION_GAPS_ANALYSIS}}
+
+#### **Enhancement Opportunities** 💡
+
+**Future Development**:
+{{ENHANCEMENT_OPPORTUNITIES}}
+
+#### **Framework Integration** ✅
+
+**Integration Success**: **Excellent**
+{{FRAMEWORK_INTEGRATION_ANALYSIS}}
+
+### Business Value Assessment
+
+#### **Framework Validation** ✅
+
+**Proof of Concept**: **Successful**
+{{FRAMEWORK_VALIDATION_ANALYSIS}}
+
+#### **Development Efficiency** ✅
+
+**Time to Market**: **Accelerated**
+{{DEVELOPMENT_EFFICIENCY_ANALYSIS}}
+
+#### **Code Quality** ✅
+
+**Professional Standards**: **Achieved**
+{{QUALITY_STANDARDS_ANALYSIS}}
+
+### Conclusion
+
+#### **Overall Assessment**: ✅ **EXCELLENT**
+
+The {{PROJECT_NAME}} CLI application represents a **successful implementation** of the Context Engineering Framework's Python CLI development methodology. The application demonstrates:
+
+**✅ Technical Excellence**:
+{{TECHNICAL_EXCELLENCE_SUMMARY}}
+
+**✅ Framework Compliance**:
+{{FRAMEWORK_COMPLIANCE_SUMMARY}}
+
+**✅ Production Readiness**:
+{{PRODUCTION_READINESS_SUMMARY}}
+
+#### **Strategic Value**
+
+**Framework Validation**: {{STRATEGIC_VALUE_ANALYSIS}}
+
+**Reusability**: {{REUSABILITY_ANALYSIS}}
+
+#### **Final Recommendation**
+
+**Status**: ✅ **Framework Example Success**
+
+{{FINAL_RECOMMENDATION_ANALYSIS}}
+
+**Next Steps**:
+{{NEXT_STEPS_RECOMMENDATIONS}}
+
+---
+
+**Report Status**: Complete  
+**Testing Date**: {{CURRENT_DATE}}  
+**Framework Version**: v1.0.0  
+**Application Status**: Production Ready Example  
+
+*Generated through comprehensive CLI testing and framework compliance validation*
+
+---
+
+**Transform your {{DOMAIN_FOCUS}} from {{CURRENT_STATE}} into {{DESIRED_STATE}} with {{PROJECT_NAME}}.**

@@ -2,6 +2,10 @@
 
 Execute the complete implementation of your project using The Three-Document Pattern Context Engineering Framework.
 
+## Universal Flags
+
+@include flag-inheritance.yml#Universal_Always
+
 ## Usage
 
 ```bash
@@ -162,55 +166,79 @@ graph LR
 
 The command efficiently executes using the new 19 internal commands in a systematic approach:
 
-### Phase 1: Internal Configuration & Project Setup
-- **Read `.claude/CLAUDE.md`** - Load internal toolkit configuration and capabilities
-- **Initialize internal tools** - Access 19 specialized commands and templates
-- `/load` - Load and validate three-document pattern
-- `/scan --validate` - Validate all framework documents
-- **Read project's `CLAUDE.md`** - Load context engineering methodology and standards
-- **Merge configurations** - Combine internal toolkit with project methodology
-- `/analyze --arch --think` - Analyze requirements and architecture consistency
-- `/dev-setup` - Initialize development environment
+### Phase 1: Framework Initialization & Project Setup
+- **Read `.claude/CLAUDE.md`** - Load complete internal toolkit configuration (19 commands, personas, templates, token-saving modes, MCP integration)
+- **Load shared configuration modules** - Import all @include references (toolkit-core.yml, toolkit-personas.yml, flag-inheritance.yml, etc.)
+- **Initialize framework capabilities** - Activate 19 specialized commands, 9 cognitive personas, Next.js + Tailwind templates, Python CLI patterns
+- **Apply universal flags** - Process all command flags including token-saving modes, thinking modes, persona selection, MCP controls
+- **Read repository `CLAUDE.md`** - Load framework development context and consistency requirements
+- **Read project's `CLAUDE.md`** - Load Three-Document Pattern methodology, coding standards, and project-specific patterns
+- **Merge framework configurations** - Combine internal toolkit + repository context + project methodology
+- `/load` - Load and validate three-document pattern using framework standards
+- `/scan --validate --strict` - Validate all framework documents using framework quality standards
+- `/analyze --arch --think --persona-architect` - Analyze requirements and architecture consistency using systems thinking
+- `/dev-setup --nextjs --tailwind` - Initialize development environment with framework templates
 
-### Phase 2: Core Implementation
-- `/build --init` - Create project structure as defined in DESIGN.md
-- `/build --feature` - Implement core features following PRP specifications
-- `/build --nextjs --tailwind --shadcn` - Generate modern UI components (if applicable)
-- `/spawn` - Execute parallel implementation tasks efficiently
+### Phase 2: Framework-Driven Core Implementation
+- `/build --init --feature --tdd` - Create project structure following framework architectural patterns
+- `/build --feature --nextjs --tailwind --shadcn --persona-frontend` - Implement core features using framework templates and UX-focused approach
+- `/build --python --cli --click --persona-backend` - Generate CLI components using framework Python patterns (if applicable)
+- `/spawn --parallel --watch` - Execute parallel implementation tasks using framework efficiency patterns
+- **Apply framework architecture patterns** - Modular configuration, command-based architecture, template-driven development
+- **Ensure framework quality standards** - Evidence-based methodology, zero dependencies, cross-component validation
 
-### Phase 3: Quality Assurance
-- `/test --coverage --e2e` - Implement comprehensive testing strategy
-- `/review --quality --evidence` - Ensure code quality and standards compliance
-- `/scan --security --strict` - Validate security requirements
-- `/analyze --performance` - Validate performance criteria
+### Phase 3: Framework Quality Assurance & Validation
+- `/test --coverage --e2e --tdd --persona-qa` - Implement comprehensive testing strategy using framework testing patterns
+- `/review --quality --evidence --strict` - Ensure code quality using framework evidence-based methodology
+- `/scan --security --strict --owasp --persona-security` - Validate security using framework security patterns and threat modeling
+- `/analyze --performance --profile --persona-performance` - Validate performance criteria using framework optimization patterns
+- **Validate framework compliance** - Ensure implementation follows framework consistency requirements
+- **Apply framework best practices** - Maintain template consistency, cross-component validation
 
-### Phase 4: Production Readiness
-- `/document` - Generate complete documentation and setup guides
-- `/deploy --plan` - Create deployment configuration
-- `/cleanup --validate` - Final validation and cleanup
-- `/git` - Commit and prepare for deployment
+### Phase 4: Framework-Standard Production Readiness
+- `/document --api --user --depth expert --visual` - Generate complete documentation following framework documentation standards
+- `/deploy --plan --env prod --validate` - Create deployment configuration using framework operations patterns
+- `/cleanup --all --validate --strict` - Final validation using framework quality assurance standards
+- `/git --checkpoint --sync` - Commit using framework git workflow management
+- **Ensure framework documentation alignment** - Follow framework documentation management standards
+- **Apply framework deployment practices** - Use framework operations and deployment patterns
 
 This systematic approach leverages the full capabilities of the specialized command toolkit to ensure efficient, high-quality implementation execution.
 
 **Note:** The internal commands execute automatically and transparently. Users simply run `/execute_project` and Claude internally uses the appropriate specialized commands to deliver optimal results without requiring user awareness or intervention.
 
-## Dual Configuration System
+## Triple Configuration System
 
-This command operates with two complementary CLAUDE.md files:
+This command operates with three complementary CLAUDE.md files for complete framework integration:
 
 1. **`.claude/CLAUDE.md`** (Internal Toolkit Configuration)
-   - **Purpose**: Provides access to 19 specialized commands and Next.js + Tailwind templates
-   - **Source**: Based on SuperClaude project for enhanced Claude capabilities
-   - **Scope**: Internal tool library for efficient task execution
-   - **Usage**: Read first to initialize internal toolkit capabilities
+   - **Purpose**: Complete framework toolkit including 19 specialized commands, 9 cognitive personas, Next.js + Tailwind templates, Python CLI patterns, token-saving modes, MCP integration
+   - **Source**: Based on SuperClaude project enhanced for Context Engineering Framework
+   - **Scope**: Internal tool library providing all framework capabilities
+   - **Configuration**: All shared modules (toolkit-core.yml, toolkit-personas.yml, flag-inheritance.yml, etc.)
+   - **Usage**: Read first to initialize complete framework capabilities
 
-2. **Project's `CLAUDE.md`** (Context Engineering Methodology)  
-   - **Purpose**: Defines development methodology, coding standards, and project-specific patterns
-   - **Source**: Three-Document Pattern Context Engineering Framework
-   - **Scope**: Project-specific methodology and quality standards
-   - **Usage**: Read second to understand project's "HOW to build" requirements
+2. **Repository `CLAUDE.md`** (Framework Development Context)
+   - **Purpose**: Framework development methodology, consistency requirements, quality standards, architecture patterns
+   - **Source**: Context Engineering Framework repository knowledge base
+   - **Scope**: Framework maintenance and improvement guidelines
+   - **Standards**: Evidence-based methodology, zero dependencies, backward compatibility, cross-component validation
+   - **Usage**: Read to understand framework context and ensure consistency
 
-**Configuration Merge Process**: The command combines both configurations to leverage internal toolkit efficiency while adhering to project-specific methodology and standards.
+3. **Project's `CLAUDE.md`** (Three-Document Pattern Methodology)  
+   - **Purpose**: Project-specific implementation of Three-Document Pattern methodology, coding standards, token-saving guidelines
+   - **Source**: Framework template customized for specific project needs
+   - **Scope**: Project methodology aligned with framework standards
+   - **Integration**: Token-saving modes, architectural patterns, quality standards from framework
+   - **Usage**: Read to understand project's specific "HOW to build" requirements within framework context
+
+**Framework Integration Process**: The command systematically combines all three configuration layers to create complete framework-native operation:
+1. **Internal Toolkit Layer**: Provides core capabilities and tools
+2. **Framework Context Layer**: Ensures consistency and quality standards  
+3. **Project Methodology Layer**: Applies specific implementation requirements
+4. **Command Flag Override**: User-specified flags take precedence over all configuration defaults
+
+This triple-layer integration ensures every implementation is fully framework-compliant while meeting specific project needs.
 
 ## Best Practices
 

@@ -12,15 +12,16 @@ This is **The Three-Document Pattern Context Engineering Framework** - a systema
 - **`.claude/`** - Internal toolkit (19 commands, templates, configuration) - **Framework Core**
 - **`framework/`** - User-facing templates and methodology - **User Interface**  
 - **`examples/`** - Real-world usage demonstration (Tetris game) - **Validation**
-- **`docs/`** - Design decisions and methodology articles - **Documentation**
+- **`docs/`** - Design decisions, methodology articles, and token-saving guides - **Documentation**
 - **`toolkit/`** - Internal toolkit documentation - **Internal Docs**
 - **`install.sh`** - MCP server installer (optional) - **Distribution**
 
 ### Key Relationships
-- `.claude/CLAUDE.md` provides enhanced capabilities (19 commands, personas, templates)
+- `.claude/CLAUDE.md` provides enhanced capabilities (21 commands, personas, templates, token-saving modes)
 - `framework/CLAUDE.md` is user template for project methodology
-- Examples must demonstrate current framework capabilities
+- Examples must demonstrate current framework capabilities including token optimization
 - Documentation must stay synchronized across all levels
+- Token-saving documentation spans multiple directories (README.md, docs/, toolkit/)
 
 ## Development Context
 
@@ -34,6 +35,8 @@ This is **The Three-Document Pattern Context Engineering Framework** - a systema
 - Command modifications require documentation updates
 - Examples must remain current with framework changes
 - Cross-component validation required
+- Token-saving mode support must be universal across all commands
+- Training materials must reflect current implementation capabilities
 
 ## Development Standards
 
@@ -43,6 +46,7 @@ This is **The Three-Document Pattern Context Engineering Framework** - a systema
 - **Backward Compatibility**: Maintain compatibility for existing users
 - **Cross-Component Testing**: Validate changes across multiple scenarios
 - **Template Synchronization**: Keep internal and user-facing components aligned
+- **Token Optimization**: Systematic approach to cost reduction while maintaining quality
 
 ### Technology Stack
 - **Next.js + Tailwind CSS**: Modern web development with shadcn/ui components
@@ -52,9 +56,10 @@ This is **The Three-Document Pattern Context Engineering Framework** - a systema
 
 ### Architecture Patterns
 - **Modular Configuration**: @include references throughout .claude/CLAUDE.md
-- **Command-Based Architecture**: 19 specialized commands with flag inheritance
+- **Command-Based Architecture**: 21 specialized commands with flag inheritance
 - **Template-Driven Development**: Production-ready components and CLI patterns
 - **Separation of Concerns**: Clear distinction between internal toolkit and user templates
+- **Token-Saving Architecture**: Three-mode system for optimal token usage (Standard, Token-Saving, Minimal)
 
 ## Working with this Repository
 
@@ -86,6 +91,7 @@ This is **The Three-Document Pattern Context Engineering Framework** - a systema
 - **Synchronized Updates**: Keep README.md, docs/, toolkit/ aligned
 - **Version Management**: Handle framework versioning and releases
 - **Template Maintenance**: Manage Next.js + Tailwind templates and CLI patterns
+- **Token-Saving Documentation**: Comprehensive guides for mode selection, symbol system, and team adoption
 
 ### Technical Considerations
 - **Internal Toolkit**: .claude/ directory provides enhanced Claude capabilities
@@ -108,7 +114,35 @@ This is **The Three-Document Pattern Context Engineering Framework** - a systema
 - Update command documentation
 - Add appropriate examples
 - Consider cross-component interactions
+- Ensure token-saving mode compatibility across all commands
+- Update team adoption and training materials
 
 ---
 
-**Framework Development Repository** | **Three-Document Pattern Context Engineering Framework v1.0.0** | **Repository for framework maintenance and improvement**
+## Recent Updates (2025-07-10)
+
+### Token-Saving Feature Implementation
+- **Three-Mode System**: Standard (--verbose), Token-Saving (--token-saving), Minimal (--minimal)
+- **Universal Flag Inheritance**: All 21 commands support token-saving modes
+- **Production Development Guidance**: Clear recommendations for initial vs experienced production usage
+- **Symbol System Training**: Comprehensive training materials for Minimal mode adoption
+- **Team Adoption Strategy**: Enterprise-scale deployment methodology
+- **Automation Recommendations**: AI-powered mode selection framework
+
+### Documentation Enhancements
+- **README.md**: Added comprehensive token-saving section with best practices
+- **docs/DESIGN_DECISIONS.md**: Decision #002 documenting token-saving architecture
+- **docs/SYMBOL_SYSTEM_TRAINING.md**: Complete training guide for symbol-based communication
+- **docs/MODE_SELECTION_AUTOMATION.md**: Intelligent mode selection recommendations
+- **docs/TEAM_ADOPTION_STRATEGY.md**: Systematic team and enterprise adoption guide
+- **toolkit/README.md**: Updated with smart token-saving modes section
+
+### Technical Implementation
+- **flag-inheritance.yml**: Added complete token-saving flags to Universal_Always
+- **execute_project.md**: Added universal flag inheritance
+- **generate_design.md**: Added universal flag inheritance
+- **Quality Validation**: Verified token-saving implementation across all framework components
+
+---
+
+**Framework Development Repository** | **Three-Document Pattern Context Engineering Framework v1.0.0** | **Repository for framework maintenance and improvement** | **Token-Saving Modes: 50-85% cost reduction**

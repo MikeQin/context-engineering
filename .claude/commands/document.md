@@ -19,6 +19,7 @@ Examples:
 - `/document --type user --style tutorial` - User guide w/ tutorials
 - `/document --cli --help-generation` - CLI help text and man pages
 - `/document --cli --user-guide --style tutorial` - CLI user documentation
+- `/document --session-summary` - Generate professional session documentation
 
 Documentation modes:
 
@@ -47,6 +48,16 @@ Documentation modes:
 **--user-guide:** Create user-facing CLI documentation
 - w/ --installation: Include installation instructions | w/ --examples: Rich usage examples
 - Create getting started guides | Document common workflows | Include troubleshooting sections
+
+**--session-summary:** Generate professional session documentation
+- **Default Location**: `./docs/sessions/SESSION_YYYY-MM-DD_HHMMSS.md`
+- **Auto-Create Directories**: Creates `docs/sessions/` if not exists
+- **Professional Format**: Executive summary, technical details, business impact, next steps
+- **Context Preservation**: Session continuation instructions and current state documentation
+- **Flags**:
+  - `--output`: Custom output file path (overrides default location)
+  - `--name`: Custom filename (uses timestamp if not specified)
+  - `--format`: Output format (markdown default, html, pdf available)
 
 @include shared/docs-patterns.yml#Project_Documentation
 

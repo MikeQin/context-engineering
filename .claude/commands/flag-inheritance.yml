@@ -12,6 +12,9 @@ Universal_Always:
     --plan: "Show execution plan before running"
     
   Compression:
+    --verbose: "Standard mode with full explanations (default)"
+    --token-saving: "Balanced compression with 50-70% token reduction"
+    --minimal: "Maximum compression with 70-85% token reduction"
     --uc: "UltraCompressed mode (substantial token reduction)"
     --ultracompressed: "Alias for --uc"
     

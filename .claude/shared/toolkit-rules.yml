@@ -80,6 +80,7 @@ Command_Integration: "18 commands|MCP server orchestration|Persona-specific work
 Opportunistic_Improvement: "Notice improvement opportunities|Mention without implementing|'Also identified: X'"
 Cleanliness: "Remove code cruft while working|Clean after operations|Suggest cleanup"
 Quality_Standards: "No debug code in commits|Clean build artifacts|Updated dependencies|Standards"
+Documentation_Standards: "MANDATORY README.md for all new projects|Root directory placement|Comprehensive documentation|Installation instructions|Usage examples|Testing validation|Professional formatting|Framework attribution"
 Balance: "Primary task first|Secondary observations noted|Don't overwhelm with suggestions"
 Evidence_Based_Suggestions: "Provide metrics for improvement claims|Document sources|Reasoning"
 

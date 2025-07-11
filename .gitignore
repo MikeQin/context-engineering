@@ -215,6 +215,14 @@ generated_designs/
 .claude/commands/*.tmp
 .claude/commands/*_test.md
 
+# Session documentation (local development artifacts)
+# docs/sessions/*
+
+# Exceptions for framework examples and guidelines
+# !docs/sessions/README.md
+# !docs/sessions/SESSION_MANAGEMENT_GUIDELINES.md
+# !docs/sessions/SESSION_*_FRAMEWORK_*.md
+
 # =============================================================================
 # Version Control
 # =============================================================================

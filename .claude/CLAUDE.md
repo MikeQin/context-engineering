@@ -7,7 +7,7 @@ You are Claude with enhanced capabilities provided by the Comprehensive Claude D
 ### Repository-Based Tool Access
 When Claude Code detects this `.claude/CLAUDE.md` file, you automatically gain access to:
 
-**19 Specialized Commands** located in `.claude/commands/`:
+**21 Specialized Commands** located in `.claude/commands/`:
 - **Analysis Tools**: `/analyze`, `/review`, `/scan`, `/explain` 
 - **Development Tools**: `/build`, `/dev-setup`, `/test`
 - **Operations Tools**: `/deploy`, `/migrate`, `/cleanup`
@@ -27,7 +27,7 @@ With claude-tools loaded, you can:
 
 1. **Generate Modern Components**: Create production-ready Next.js + Tailwind components instantly
 2. **Generate CLI Applications**: Create Python CLI tools with Click, Typer, or argparse frameworks
-3. **Use Specialized Commands**: Access 19 domain-specific development tools
+3. **Use Specialized Commands**: Access 21 domain-specific development tools
 4. **Apply Cognitive Personas**: Switch between 9 different thinking modes
 5. **Access Template Library**: Use pre-built, accessible, TypeScript-ready templates and CLI patterns
 6. **Provide Zero-Cost Development**: No external service dependencies for UI or CLI generation
@@ -38,6 +38,12 @@ Users can invoke your enhanced capabilities using command syntax like:
 - `/build --python --cli --click` (generates Python CLI with Click framework)
 - `/analyze --code --persona-architect` (analyzes code with systems thinking)
 - `/design --api --ddd --think-hard` (designs API with domain-driven approach)
+
+### Token-Saving Modes
+All commands support three intelligent token optimization modes:
+- `/build --nextjs --tailwind --verbose` (Standard mode: full explanations, ideal for learning)
+- `/build --nextjs --tailwind --token-saving` (Balanced mode: 50-70% token reduction)
+- `/build --nextjs --tailwind --minimal` (Maximum compression: 70-85% token reduction)
 
 You should use the following configuration to guide your enhanced behavior.
 

@@ -109,12 +109,49 @@ claude mcp add puppeteer npx @modelcontextprotocol/server-puppeteer
 
 **Note:** To manage or remove MCP servers after installation, use Claude Code's native MCP management commands as needed.
 
-### 📊 **Token Efficiency**
+### 📊 **Smart Token-Saving Modes**
+**Claude Toolkit** provides intelligent token optimization with three modes:
+
+**🎯 Standard Mode (--verbose)**
+- **Usage**: Framework learning, comprehensive documentation, training scenarios
+- **Token Usage**: 100% (baseline) - Full explanations and detailed examples
+- **Best For**: First-time users, complex analysis, stakeholder presentations
+
+**⚡ Token-Saving Mode (--token-saving)**
+- **Usage**: Production development, experienced teams, balanced efficiency
+- **Token Reduction**: 50-70% while maintaining technical quality
+- **Best For**: Ongoing projects, iterative workflows, experienced developers
+
+**🚀 Minimal Mode (--minimal)**
+- **Usage**: Rapid prototyping, token budget constraints, high-frequency operations
+- **Token Reduction**: 70-85% using symbol-based communication
+- **Best For**: Expert developers, large codebases, rapid iteration cycles
+
+**Progressive Adoption Strategy:**
+```bash
+# Phase 1: Learning
+/build --nextjs --tailwind --verbose
+
+# Phase 2: Production
+/build --nextjs --tailwind --token-saving
+
+# Phase 3: Expert
+/build --nextjs --tailwind --minimal
+```
+
+**Symbol System for Minimal Mode:**
+```
+Process Flow: → (leads to) | (separator) & (combine) : (define) » (sequence)
+Status: ✅ (success) ❌ (failure) ⚠ (warning) ℹ (info)
+Technical: cfg (config) impl (implementation) perf (performance) val (validation)
+```
+
+### 📊 **Token Efficiency Features**
 **Claude Toolkit**'s `@include` template system helps manage token usage:
-- **UltraCompressed mode** option for token reduction
+- **Three-mode system** for flexible token optimization
 - **Template references** for configuration management
 - **Local generation** eliminates external API token costs
-- **Context-aware compression** options
+- **Context-aware compression** with quality preservation
 
 ## 🎮 Example Workflows
 
@@ -239,10 +276,16 @@ claude mcp add puppeteer npx @modelcontextprotocol/server-puppeteer
 
 ### Token Management
 ```bash
-# Standard mode
-/build --nextjs --tailwind
+# Standard mode (100% baseline)
+/build --nextjs --tailwind --verbose
 
-# With compression
+# Token-saving mode (50-70% reduction)
+/build --nextjs --tailwind --token-saving
+
+# Minimal mode (70-85% reduction)
+/build --nextjs --tailwind --minimal
+
+# Legacy UltraCompressed mode (still supported)
 /analyze --architecture --uc
 
 # Native tools only

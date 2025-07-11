@@ -6,6 +6,28 @@
 > - **CLAUDE.md** (this file) - HOW to build
 > - **[PRODUCT_NAME]_DESIGN.md** (generate with `/generate_design`) - Technical architecture
 
+## 🎯 Token-Saving Mode Usage
+
+The Context Engineering Framework includes intelligent token optimization for efficient development:
+
+### **Mode Selection Guidelines**
+- **Standard Mode (--verbose)**: Use for initial project development, learning, and comprehensive documentation needs
+- **Token-Saving Mode (--token-saving)**: Use for ongoing production development, iterative workflows (50-70% token reduction)
+- **Minimal Mode (--minimal)**: Use for rapid prototyping, high-frequency operations, expert teams (70-85% token reduction)
+
+### **Production Development Recommendation**
+- **Initial Production Projects**: Start with Standard Mode for team learning and quality assurance
+- **Experienced Production Development**: Graduate to Token-Saving Mode for efficient iteration
+- **Expert Operations**: Use Minimal Mode for high-frequency tasks and rapid prototyping
+
+### **Usage Examples**
+```bash
+# Framework commands with mode selection
+/generate_design --token-saving ./PRODUCT_PRP.md
+/execute_project --verbose ./my-project
+/build --nextjs --tailwind --minimal
+```
+
 ### 🔄 Project Awareness & Context
 - **Always read `*_PRP.md`** as product requirements prompt or product requirements document at the start of a new conversation to understand product requirements.
 - **Always read `DESIGN.md`** at the start of a new conversation to understand the project's architecture, goals, style, and constraints.
@@ -16,6 +38,12 @@
 ### 🧱 Code Structure & Modularity
 - **Never create a file longer than 500 lines of code.** If a file approaches this limit, refactor by splitting it into modules or helper files.
 - **Organize code into clearly separated modules**, grouped by feature or responsibility.
+
+#### 📋 Project Documentation Requirements
+- **MANDATORY README.md**: Every new project must have a comprehensive README.md in the root directory
+- **Professional Documentation**: Include installation instructions, usage examples, configuration guidance, and testing validation
+- **Framework Attribution**: Acknowledge Context Engineering Framework usage and link to repository
+- **Testing Analysis**: Include testing report and validation summary for production applications
 
 #### Python Projects (Backend/API/Agents)
 - **Project structure by type**:
@@ -289,8 +317,11 @@
   - Named exports for components and utilities
 
 ### 📚 Documentation & Explainability
-- **Update `README.md`** when new features are added, dependencies change, or setup steps are modified.
-- **Comment non-obvious code** and ensure everything is understandable to a mid-level developer.
+- **Generate `README.md` for every new project** as a mandatory requirement in the root directory
+- **Update `README.md`** when new features are added, dependencies change, or setup steps are modified
+- **Include comprehensive documentation**: installation instructions, usage examples, configuration, testing validation
+- **Use `/document --session-summary`** to create professional session documentation (saved to `docs/sessions/`)
+- **Comment non-obvious code** and ensure everything is understandable to a mid-level developer
 
 #### Python Documentation
 - When writing complex logic, **add an inline `# Reason:` comment** explaining the why, not just the what.

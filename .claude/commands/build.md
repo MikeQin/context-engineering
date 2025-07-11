@@ -23,6 +23,8 @@ Examples:
 
 Pre-build: Remove artifacts (dist/, build/, .next/) | Clean temp files & cache | Validate deps | Remove debug
 
+**README.md Generation**: MANDATORY for all new projects and applications | Root directory placement | Comprehensive documentation | Installation instructions | Usage examples | Testing validation | Professional formatting
+
 Build modes:
 **--init:** New project w/ stack (Next.js|API|Fullstack|Mobile|CLI) | TS default | Testing setup | Git workflow
 **--feature:** Impl feature→existing patterns | Maintain consistency | Include tests  

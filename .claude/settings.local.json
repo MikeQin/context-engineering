@@ -19,7 +19,11 @@
       "Bash(mkdir:*)",
       "Bash(cp:*)",
       "Bash(/generate_design REPO_ANALYZER_PRP.md)",
-      "Bash(true)"
+      "Bash(true)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(python -m pip install:*)",
+      "Bash(python:*)",
+      "Bash(pytest:*)"
     ],
     "deny": []
   }

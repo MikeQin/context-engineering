@@ -78,7 +78,7 @@ Traditional prompt engineering focuses on clever request phrasing—like giving 
 
 The framework now includes a comprehensive **Internal Toolkit** that automatically enhances Claude Code with:
 
-### **🔧 19 Specialized Commands**
+### **🔧 21 Specialized Commands**
 - **Analysis Tools**: `/analyze`, `/review`, `/scan`, `/explain` - Multi-dimensional code analysis
 - **Development Tools**: `/build`, `/dev-setup`, `/test` - Next.js + Tailwind CSS and Python CLI development
 - **Operations Tools**: `/deploy`, `/migrate`, `/cleanup` - Production-ready deployment
@@ -93,7 +93,14 @@ Switch between specialized thinking modes: `--persona-architect`, `--persona-fro
 - **MCP Integration**: `--c7`, `--seq`, `--pup` flags for Context7, Sequential, and Puppeteer
 - **Next.js + Tailwind**: `--nextjs`, `--tailwind`, `--shadcn` for modern UI generation
 - **Python CLI**: `--python`, `--cli`, `--click`, `--typer` for command-line application development
-- **Token Optimization**: `--uc` for UltraCompressed mode with 70% token reduction
+- **Token Optimization**: Smart token-saving modes for efficient development workflows
+
+### **💡 Smart Token-Saving Modes**
+The framework includes three intelligent modes for optimal token usage:
+
+- **Standard Mode (--verbose)**: Full explanations, comprehensive documentation, ideal for learning
+- **Token-Saving Mode (--token-saving)**: Balanced efficiency with 50-70% token reduction while maintaining quality
+- **Minimal Mode (--minimal)**: Maximum compression with 70-85% token reduction using symbol-based communication
 
 **🎯 Auto-Detection**: When you use this framework, Claude Code automatically detects `.claude/CLAUDE.md` and gains access to all enhanced capabilities.
 
@@ -124,6 +131,7 @@ cp ../framework/* .
 # - PRODUCT_PRP.md (Enterprise template)
 # - PRODUCT_PRP_SLIM.md (Slim template)  
 # - CLAUDE.md (Development methodology)
+# - README.md template (Auto-generated for all new projects)
 ```
 
 ### Step 4: **Choose and Customize Your Template**
@@ -344,6 +352,60 @@ context-engineering/                 # Clone this repository
 - **📂 [Source Code](https://github.com/MikeQin/tetris-game)** - Complete implementation repository
 - **📋 [Requirements](./examples/web-app/TETRIS_PRP.md)** - The PRP that built this game
 - **🛠️ [Methodology](./examples/web-app/CLAUDE.md)** - Development standards used
+
+## 🎯 Token-Saving Mode Best Practices
+
+### **Mode Selection Strategy**
+
+**🎯 Standard Mode (--verbose)**
+- **When to Use**: Framework onboarding, learning, initial production development
+- **Perfect For**: First-time users, complex architectural analysis, training scenarios, first 2-3 production projects
+- **Team Context**: Knowledge transfer, educational content, stakeholder presentations, production team learning
+- **Output Quality**: Maximum clarity with complete explanations and examples
+
+**⚡ Token-Saving Mode (--token-saving)**
+- **When to Use**: Production development, experienced teams, balanced efficiency needs
+- **Perfect For**: Ongoing projects, iterative workflows, moderate complexity tasks
+- **Team Context**: Experienced developers who understand the framework
+- **Output Quality**: Maintains quality while optimizing token usage (50-70% reduction)
+
+**🚀 Minimal Mode (--minimal)**
+- **When to Use**: Rapid prototyping, token budget constraints, high-frequency operations
+- **Perfect For**: Expert developers, large codebases, rapid iteration cycles
+- **Team Context**: Teams familiar with symbol system and framework patterns
+- **Output Quality**: Maximum compression with technical accuracy (70-85% reduction)
+
+### **Progressive Adoption Strategy**
+
+```bash
+# Phase 1: Learning & Initial Production (Framework onboarding)
+/build --nextjs --tailwind --verbose
+
+# Phase 2: Experienced Production (Ongoing development)
+/build --nextjs --tailwind --token-saving
+
+# Phase 3: Expert Operations (High-frequency, rapid iteration)
+/build --nextjs --tailwind --minimal
+```
+
+### **Context-Aware Usage**
+
+**Initial Production Development**: Start with Standard mode for team learning, comprehensive explanations, and quality assurance
+**Experienced Production Development**: Graduate to Token-Saving mode for ongoing iterative development 
+**Expert Production Operations**: Use Minimal mode for high-frequency operations and rapid prototyping
+**Large Codebases**: Use Minimal mode for file operations, Token-Saving for analysis
+**Team Training**: Use Standard mode until team masters symbol system and framework patterns
+**Production Workflows**: Default to Token-Saving mode after initial onboarding phase
+
+### **Symbol System Training**
+
+For teams adopting Minimal mode, understanding the symbol system is essential:
+
+```
+Process Flow: → (leads to) | (separator) & (combine) : (define) » (sequence)
+Status: ✅ (success) ❌ (failure) ⚠ (warning) ℹ (info)
+Technical: cfg (config) impl (implementation) perf (performance) val (validation)
+```
 
 ## 🎯 Framework Versatility
 
