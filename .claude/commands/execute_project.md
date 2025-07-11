@@ -31,7 +31,7 @@ When `--token-saving` is used, the command generates:
 - Minimal comments and documentation
 - Core functionality without advanced features
 - Optimized file structure
-- Symbol-based progress reporting
+- Optimized progress reporting
 
 Example:
 ```bash

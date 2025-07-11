@@ -79,6 +79,7 @@ Traditional prompt engineering focuses on clever request phrasing—like giving 
 The framework now includes a comprehensive **Internal Toolkit** that automatically enhances Claude Code with:
 
 ### **🔧 21 Specialized Commands**
+- **Framework Core**: `/generate_design`, `/execute_project` - The foundation of the framework's functionality
 - **Analysis Tools**: `/analyze`, `/review`, `/scan`, `/explain` - Multi-dimensional code analysis
 - **Development Tools**: `/build`, `/dev-setup`, `/test` - Next.js + Tailwind CSS and Python CLI development
 - **Operations Tools**: `/deploy`, `/migrate`, `/cleanup` - Production-ready deployment
@@ -98,9 +99,9 @@ Switch between specialized thinking modes: `--persona-architect`, `--persona-fro
 ### **💡 Smart Token-Saving Modes**
 The framework includes three intelligent modes for optimal token usage:
 
-- **Standard Mode (--verbose)**: Full explanations, comprehensive documentation, ideal for learning
+- **Standard Mode (--verbose)**: Full explanations, comprehensive documentation, ideal for learning, and production-ready development
 - **Token-Saving Mode (--token-saving)**: Balanced efficiency with 50-70% token reduction while maintaining quality
-- **Minimal Mode (--minimal)**: Maximum compression with 70-85% token reduction using symbol-based communication
+- **Minimal Mode (--minimal)**: Maximum compression with 70-85% token reduction for expert operations
 
 **🎯 Auto-Detection**: When you use this framework, Claude Code automatically detects `.claude/CLAUDE.md` and gains access to all enhanced capabilities.
 
@@ -128,10 +129,10 @@ cd my-awesome-app
 cp ../framework/* .
 
 # Your project folder now contains:
-# - PRODUCT_PRP.md (Enterprise template)
-# - PRODUCT_PRP_SLIM.md (Slim template)  
+# - PRODUCT_PRP.md (Enterprise template including full web frontend and backend)
+# - PRODUCT_PRP_SLIM.md (Slim template) 
+# - PRODUCT_PRP_CLI.md (Python-cli template) 
 # - CLAUDE.md (Development methodology)
-# - README.md template (Auto-generated for all new projects)
 ```
 
 ### Step 4: **Choose and Customize Your Template**
@@ -149,23 +150,39 @@ chmod +x install.sh
 
 This installs MCP servers for enhanced capabilities. **Framework commands are automatically available** - no copying required!
 
-**Note:** MCP integration provides access to advanced features like library documentation (Context7), multi-step reasoning (Sequential), and browser automation (Puppeteer). Commands work immediately after cloning the repository.
+**Note:** MCP integration provides access to advanced features like library documentation (Context7), multi-step reasoning (Sequential), and browser automation (Puppeteer). `Commands` work immediately after cloning the repository and installing MCP servers.
 
 ### Step 7: **Generate Your Architecture**
 ```bash
 # Generate DESIGN.md from your customized PRP
 /generate_design ./my-awesome-app/PRODUCT_PRP.md
 
+# Token-Saving Options:
+/generate_design --verbose ./my-awesome-app/PRODUCT_PRP.md      # Full explanations (default)
+/generate_design --token-saving ./my-awesome-app/PRODUCT_PRP.md # 50-70% token reduction
+/generate_design --minimal ./my-awesome-app/PRODUCT_PRP.md      # 70-85% token reduction
+
 # This creates [PRODUCT_NAME]_DESIGN.md in your project folder
 ```
 
 ### Step 8: **Execute the Implementation**
+
+- Review the generated `[PRODUCT_NAME]_DESIGN.md`
+- Make any modification to the `[PRODUCT_NAME]_DESIGN.md` if necessary
+- Approve the `[PRODUCT_NAME]_DESIGN.md` with your stakeholders
+- Implement the design `[PRODUCT_NAME]_DESIGN.md` and the requirements `PRODUCT_PRP.md` using the following command.
+
 ```bash
 # Execute complete product implementation using all three documents
 /execute_project ./my-awesome-app
 
-# This creates the complete working product following your specifications
+# Token-Saving Options:
+/execute_project --verbose ./my-awesome-app      # Full explanations (default)
+/execute_project --token-saving ./my-awesome-app # 50-70% token reduction
+/execute_project --minimal ./my-awesome-app      # 70-85% token reduction
 ```
+
+This creates the complete working product following your specifications.
 
 ### Step 9: **Deploy and Launch**
 Your product is now production-ready:
@@ -174,38 +191,7 @@ Your product is now production-ready:
 - **Quality standards** following CLAUDE.md methodology
 - **Documentation** and deployment guides included
 
-### 5. **Generate Your Architecture**
-
-**Option A: Use Claude CLI Command (Recommended)**
-```bash
-/generate_design                    # Uses PRODUCT_PRP.md or PRODUCT_PRP_SLIM.md
-/generate_design ./examples/web-app/TETRIS_PRP.md      # Uses specific PRP file
-/generate_design ./path/to/PRP.md   # Uses PRP file from any location
-```
-
-**Option B: Use Manual Prompt**
-Copy this exact prompt to your AI assistant:
-
-```
-I have created a PRODUCT_PRP.md file with my project requirements and I'm using CLAUDE.md for development methodology. Please read both files and generate a comprehensive DESIGN.md document that includes:
-
-1. Problem statement and context
-2. Possible implementation approaches with trade-offs
-3. Architecture and system design
-4. Testing strategy (unit tests, integration tests, security scans)
-5. Technology stack justification 
-6. Project structure (tree-style directory layout)
-7. External dependencies and integrations
-8. Documentation references
-9. Acceptance criteria and success metrics
-10. Technical diagrams (Mermaid diagrams when helpful)
-
-Please ensure the DESIGN.md follows the architecture patterns and quality standards defined in CLAUDE.md, and fully addresses all requirements specified in PRODUCT_PRP.md.
-
-Lastly, save the generated DESIGN.md in 'my-awesome-app' folder.
-```
-
-### 6. **Follow the Complete Workflow**
+## Follow the Complete Framework Workflow
 
 **Two-Command Development Process:**
 
@@ -236,17 +222,12 @@ context-engineering/                 # Clone this repository
 ├── README.md                    # This overview and quick start guide
 ├── INTRO.md                     # Executive summary for presentations
 ├── LICENSE                      # MIT License
-├── CODE_OF_CONDUCT.md           # Community guidelines
-├── VERSION                      # Framework version (1.0.0)
+├── CLAUDE.md                    # Repository-level documentation
 ├── install.sh                  # MCP server installer (optional but recommended)
-├── toolkit/                    # Internal toolkit documentation
-│   ├── README.md               # Comprehensive toolkit guide
-│   ├── ARCHITECTURE.md         # Technical architecture
-│   └── TUTORIAL.md             # Complete commands tutorial
 ├── .gitignore                  # Git ignore patterns
 ├── .claude/                    # Internal toolkit (auto-detected by Claude Code)
 │   ├── CLAUDE.md               # Internal toolkit configuration
-│   ├── commands/               # 19 specialized development tools
+│   ├── commands/               # 21 specialized development tools
 │   │   ├── analyze.md          # Multi-dimensional code analysis
 │   │   ├── build.md            # Next.js + Tailwind project builder
 │   │   ├── design.md           # System architecture and API design
@@ -255,18 +236,20 @@ context-engineering/                 # Clone this repository
 │   │   ├── review.md           # AI-powered code review
 │   │   ├── scan.md             # Security and validation
 │   │   ├── test.md             # Testing framework
-│   │   ├── [11 more tools].md  # Complete development lifecycle
+│   │   ├── [13 more tools].md  # Complete development lifecycle
 │   │   └── [24 config files].yml # Modular configuration system
 │   ├── shared/                 # Core configuration modules
 │   │   ├── toolkit-core.yml    # Core philosophy and standards
 │   │   ├── toolkit-mcp.yml     # MCP server integration
 │   │   ├── toolkit-personas.yml # 9 cognitive personas
 │   │   └── toolkit-rules.yml   # Development rules and practices
-│   └── templates/              # Next.js + Tailwind CSS templates
-│       └── nextjs-tailwind/    # shadcn/ui components and layouts
-│           ├── components/     # UI component library
-│           ├── patterns/       # Tailwind utility patterns
-│           └── generators/     # Component generation logic
+│   └── templates/              # Next.js + Tailwind CSS & Python CLI templates
+│       ├── nextjs-tailwind/    # shadcn/ui components and layouts
+│       │   ├── components/     # UI component library
+│       │   ├── patterns/       # Tailwind utility patterns
+│       │   └── generators/     # Component generation logic
+│       └── python-cli/         # Python CLI application templates
+│           └── README.md.template # CLI project template
 ├── toolkit/                    # Internal toolkit documentation
 │   ├── README.md               # Comprehensive toolkit guide
 │   ├── ARCHITECTURE.md         # Technical architecture
@@ -274,15 +257,32 @@ context-engineering/                 # Clone this repository
 ├── docs/                       # Framework documentation
 │   ├── DESIGN_DECISIONS.md     # Architectural decisions and analysis
 │   ├── MEDIUM_ARTICLE.md       # Framework methodology article
-│   └── THANKYOU.md             # Acknowledgments and credits
+│   ├── MODE_SELECTION_AUTOMATION.md # Mode selection automation
+│   ├── TEAM_ADOPTION_STRATEGY.md # Team adoption strategy
+│   ├── COMMANDS.md             # Command reference documentation
+│   ├── CLAUDE-SESSION.md       # Claude session management
+│   ├── CLAUDE-SUBAGENT.md      # Claude subagent patterns
+│   └── sessions/               # Session management documentation
+│       ├── README.md           # Session management overview
+│       ├── SESSION_MANAGEMENT_GUIDELINES.md # Session guidelines
+│       └── SESSION_*.md        # Development session records
 ├── framework/                  # Templates to copy to your projects
 │   ├── PRODUCT_PRP.md          # Enterprise template for complex projects
 │   ├── PRODUCT_PRP_SLIM.md     # Slim template for simple apps & quick builds
+│   ├── PRODUCT_PRP_CLI.md      # CLI application template
 │   └── CLAUDE.md               # Development methodology and standards
-├── examples/                    # Real-world example implementation
-│   ├── TETRIS_PRP.md           # Tetris game requirements example
-│   ├── CLAUDE.md               # Development methodology (same as framework)
-│   └── TETRIS_GAME_DESIGN.md   # Generated architecture example
+├── examples/                   # Real-world example implementations
+│   ├── web-app/                # Web application example
+│   │   ├── TETRIS_PRP.md       # Tetris game requirements example
+│   │   ├── CLAUDE.md           # Development methodology (same as framework)
+│   │   └── TETRIS_GAME_DESIGN.md # Generated architecture example
+│   └── python-cli/             # Python CLI application examples
+│       ├── CLAUDE.md           # CLI development methodology
+│       ├── PRODUCT_PRP_CLI.md  # CLI requirements example
+│       └── repo-analyzer/      # Complete CLI implementation
+│           ├── README.md       # CLI project documentation
+│           ├── pyproject.toml  # Python packaging configuration
+│           └── src/            # Source code implementation
 └── your-project/               # Create folders like this for your projects
     ├── PRODUCT_PRP.md          # Copied and customized from framework/
     ├── CLAUDE.md               # Copied from framework/
@@ -302,13 +302,15 @@ context-engineering/                 # Clone this repository
 - **[framework/CLAUDE.md](./framework/CLAUDE.md)** - Development methodology supporting Python CLI, Next.js, and backend projects
 
 **Internal Toolkit (Auto-Detected by Claude Code):**
-- **[.claude/CLAUDE.md](./.claude/CLAUDE.md)** - Internal toolkit configuration providing 19 specialized commands
-- **[toolkit/README.md](./toolkit/README.md)** - Comprehensive guide to the 19 internal tools and capabilities
+- **[.claude/CLAUDE.md](./.claude/CLAUDE.md)** - Internal toolkit configuration providing 21 specialized commands
+- **[toolkit/README.md](./toolkit/README.md)** - Comprehensive guide to the 21 internal tools and capabilities
 - **[toolkit/ARCHITECTURE.md](./toolkit/ARCHITECTURE.md)** - Technical architecture of the internal toolkit system
 - **[toolkit/TUTORIAL.md](./toolkit/TUTORIAL.md)** - Complete tutorial for all commands, personas, and workflows
 
 **Examples and Setup:**
 - **[examples/web-app/TETRIS_PRP.md](./examples/web-app/TETRIS_PRP.md)** - Real example showing how to use the enterprise template
+- **[examples/python-cli/PRODUCT_PRP_CLI.md](./examples/python-cli/PRODUCT_PRP_CLI.md)** - Python CLI application example with complete implementation
+- **[examples/python-cli/repo-analyzer/](./examples/python-cli/repo-analyzer/)** - Complete working CLI tool built with the framework
 - **[install.sh](./install.sh)** - MCP server installer for enhanced capabilities
 
 ### External Live Implementation:
@@ -372,20 +374,23 @@ context-engineering/                 # Clone this repository
 **🚀 Minimal Mode (--minimal)**
 - **When to Use**: Rapid prototyping, token budget constraints, high-frequency operations
 - **Perfect For**: Expert developers, large codebases, rapid iteration cycles
-- **Team Context**: Teams familiar with symbol system and framework patterns
+- **Team Context**: Expert development teams familiar with framework patterns
 - **Output Quality**: Maximum compression with technical accuracy (70-85% reduction)
 
 ### **Progressive Adoption Strategy**
 
 ```bash
 # Phase 1: Learning & Initial Production (Framework onboarding)
-/build --nextjs --tailwind --verbose
+/generate_design --verbose ./my-project/PRODUCT_PRP.md
+/execute_project --verbose ./my-project
 
 # Phase 2: Experienced Production (Ongoing development)
-/build --nextjs --tailwind --token-saving
+/generate_design --token-saving ./my-project/PRODUCT_PRP.md
+/execute_project --token-saving ./my-project
 
 # Phase 3: Expert Operations (High-frequency, rapid iteration)
-/build --nextjs --tailwind --minimal
+/generate_design --minimal ./my-project/PRODUCT_PRP.md
+/execute_project --minimal ./my-project
 ```
 
 ### **Context-Aware Usage**
@@ -394,18 +399,9 @@ context-engineering/                 # Clone this repository
 **Experienced Production Development**: Graduate to Token-Saving mode for ongoing iterative development 
 **Expert Production Operations**: Use Minimal mode for high-frequency operations and rapid prototyping
 **Large Codebases**: Use Minimal mode for file operations, Token-Saving for analysis
-**Team Training**: Use Standard mode until team masters symbol system and framework patterns
+**Team Training**: Use Standard mode until team masters framework patterns
 **Production Workflows**: Default to Token-Saving mode after initial onboarding phase
 
-### **Symbol System Training**
-
-For teams adopting Minimal mode, understanding the symbol system is essential:
-
-```
-Process Flow: → (leads to) | (separator) & (combine) : (define) » (sequence)
-Status: ✅ (success) ❌ (failure) ⚠ (warning) ℹ (info)
-Technical: cfg (config) impl (implementation) perf (performance) val (validation)
-```
 
 ## 🎯 Framework Versatility
 
@@ -430,11 +426,16 @@ The Three-Document Pattern Context Engineering Framework adapts to any project s
 - **Features**: Command structure, argument parsing, configuration management, distribution
 
 ### **For Learning & Examples**
-- **Use**: [`examples/web-app/TETRIS_PRP.md`](./examples/web-app/TETRIS_PRP.md)
-- **Perfect For**: Understanding the framework, seeing real implementation
-- **Features**: Complete working example with actual code
-- **🎮 Live Demo**: [Play the Tetris Game](https://tetris-game-ruddy.vercel.app/)
-- **📂 Source Code**: [GitHub Repository](https://github.com/MikeQin/tetris-game)
+- **Web App Example**: [`examples/web-app/TETRIS_PRP.md`](./examples/web-app/TETRIS_PRP.md)
+  - **Perfect For**: Understanding the framework, seeing real implementation
+  - **Features**: Complete working example with actual code
+  - **🎮 Live Demo**: [Play the Tetris Game](https://tetris-game-ruddy.vercel.app/)
+  - **📂 Source Code**: [GitHub Repository](https://github.com/MikeQin/tetris-game)
+- **Python CLI Example**: [`examples/python-cli/PRODUCT_PRP_CLI.md`](./examples/python-cli/PRODUCT_PRP_CLI.md)
+  - **Perfect For**: Learning CLI development with the framework
+  - **Features**: Complete repo-analyzer tool implementation
+  - **📂 Working Code**: [examples/python-cli/repo-analyzer/](./examples/python-cli/repo-analyzer/)
+  - **Package Structure**: Modern Python CLI with Click framework
 
 ### **Universal Benefits Across All Project Types**
 - ✅ **Zero context failures** when properly implemented
@@ -461,8 +462,8 @@ Getting started requires these simple steps:
 2. **Create project folder**: `mkdir my-app && cd my-app`
 3. **Copy templates**: `cp ../framework/* .`
 4. **Customize**: Fill in `PRODUCT_PRP_SLIM.md` with your requirements
-5. **Generate architecture**: `/generate_design ./my-app/PRODUCT_PRP_SLIM.md`
-6. **Execute implementation**: `/execute_project ./my-app`
+5. **Generate architecture**: `/generate_design --token-saving ./my-app/PRODUCT_PRP_SLIM.md`
+6. **Execute implementation**: `/execute_project --token-saving ./my-app`
 7. **Deploy your product**: Complete, production-ready code generated
 
 ### **CLI Application Start**
@@ -470,8 +471,8 @@ Getting started requires these simple steps:
 2. **Create project folder**: `mkdir my-cli-tool && cd my-cli-tool`
 3. **Copy templates**: `cp ../framework/* .`
 4. **Customize**: Fill in `PRODUCT_PRP_CLI.md` with your CLI requirements
-5. **Generate architecture**: `/generate_design ./my-cli-tool/PRODUCT_PRP_CLI.md`
-6. **Execute implementation**: `/execute_project ./my-cli-tool`
+5. **Generate architecture**: `/generate_design --token-saving ./my-cli-tool/PRODUCT_PRP_CLI.md`
+6. **Execute implementation**: `/execute_project --token-saving ./my-cli-tool`
 7. **Package and distribute**: Complete CLI application ready for distribution
 
 ### **Enterprise Start (Complex Projects)**
@@ -479,19 +480,24 @@ Getting started requires these simple steps:
 2. **Create project folder**: `mkdir enterprise-app && cd enterprise-app`
 3. **Copy templates**: `cp ../framework/* .`
 4. **Customize**: Fill in `PRODUCT_PRP.md` comprehensively
-5. **Generate architecture**: `/generate_design ./enterprise-app/PRODUCT_PRP.md`
+5. **Generate architecture**: `/generate_design --verbose ./enterprise-app/PRODUCT_PRP.md`
 6. **Review and approve** design with stakeholders
-7. **Execute implementation**: `/execute_project ./enterprise-app`
+7. **Execute implementation**: `/execute_project --verbose ./enterprise-app`
 8. **Production deployment**: Complete, tested, documented product ready
 
 ### **Learning Path**
 1. **Clone the framework**: `git clone [repo-url]` 
-2. **Study [`examples/web-app/TETRIS_PRP.md`](./examples/web-app/TETRIS_PRP.md)** to see framework in action
-3. **Play the [Live Demo](https://tetris-game-ruddy.vercel.app/)** to see the end result
-4. **Explore the [Source Code](https://github.com/MikeQin/tetris-game)** to understand the implementation
-5. **Create your first project**: `mkdir my-first-app && cd my-first-app && cp ../framework/* .`
-6. **Practice with simple projects** using the slim template
-7. **Scale up to complex projects** using the enterprise template
+2. **Study the examples**:
+   - **Web App**: [`examples/web-app/TETRIS_PRP.md`](./examples/web-app/TETRIS_PRP.md) - See framework in action
+   - **Python CLI**: [`examples/python-cli/PRODUCT_PRP_CLI.md`](./examples/python-cli/PRODUCT_PRP_CLI.md) - Learn CLI development
+3. **Experience the results**:
+   - **Play the [Live Demo](https://tetris-game-ruddy.vercel.app/)** to see the web app result
+   - **Explore the [Source Code](https://github.com/MikeQin/tetris-game)** to understand web implementation
+   - **Run the CLI tool**: `cd examples/python-cli/repo-analyzer && python -m repo_analyzer --help`
+4. **Create your first project**: `mkdir my-first-app && cd my-first-app && cp ../framework/* .`
+5. **Practice with simple projects** using the slim template
+6. **Scale up to complex projects** using the enterprise template
+7. **Build CLI tools** using the CLI template
 
 The framework includes comprehensive templates, automated tools, real-world examples, and detailed implementation guides to ensure rapid adoption at any scale.
 
@@ -499,7 +505,7 @@ The framework includes comprehensive templates, automated tools, real-world exam
 
 ### Non-Deterministic Generation Behavior
 
-**Important**: The `/generate_design` command is **NOT idempotent** - running it multiple times with the same PRP.md will produce different DESIGN.md files.
+**Important**: The `/generate_design` command is **NOT idempotent** - running it multiple times with the same PRP.md will produce a bit different DESIGN.md files. The same is true to `/execute_project` command and it might produce some variant product.
 
 #### Why This Happens:
 - **AI Generation Variance**: Claude's responses vary between runs due to model sampling and different reasoning paths
@@ -525,9 +531,9 @@ The framework includes comprehensive templates, automated tools, real-world exam
 **For Creative Projects:**
 ```bash
 # Generate multiple options, select the best
-/generate_design ./project/PRP.md  # Option A
+/generate_design --token-saving ./project/PRP.md  # Option A
 mv PROJECT_DESIGN.md PROJECT_DESIGN_v1.md
-/generate_design ./project/PRP.md  # Option B
+/generate_design --token-saving ./project/PRP.md  # Option B
 mv PROJECT_DESIGN.md PROJECT_DESIGN_v2.md
 # Team reviews both, selects optimal approach
 ```
@@ -535,9 +541,9 @@ mv PROJECT_DESIGN.md PROJECT_DESIGN_v2.md
 **For Enterprise Consistency:**
 ```bash
 # Generate once, validate thoroughly before proceeding
-/generate_design ./project/PRP.md
+/generate_design --verbose ./project/PRP.md
 # Mandatory team review and approval
-/execute_project ./project  # Only after DESIGN.md sign-off
+/execute_project --verbose ./project  # Only after DESIGN.md sign-off
 ```
 
 #### Best Practices:
@@ -635,8 +641,19 @@ cd your-awesome-project
 cp ../framework/* .
 
 # Customize your templates, generate architecture, and execute
-/generate_design ./your-awesome-project/PRODUCT_PRP.md
-/execute_project ./your-awesome-project
+# Choose your token-saving mode based on your needs:
+
+# Learning mode (comprehensive explanations)
+/generate_design --verbose ./your-awesome-project/PRODUCT_PRP.md
+/execute_project --verbose ./your-awesome-project
+
+# Production mode (balanced efficiency)
+/generate_design --token-saving ./your-awesome-project/PRODUCT_PRP.md
+/execute_project --token-saving ./your-awesome-project
+
+# Expert mode (maximum compression)
+/generate_design --minimal ./your-awesome-project/PRODUCT_PRP.md
+/execute_project --minimal ./your-awesome-project
 
 # Your complete product is now ready for deployment!
 ```
@@ -647,6 +664,7 @@ cp ../framework/* .
 
 ---
 "**Context Engineering** is replacing **Vibe Coding** as the dominant AI development methodology."  
+
 Or simply, "**Context Engineering is a new way of Vibe Coding.**"
 
 [⭐ Star on GitHub](https://github.com/MikeQin/context-engineering) | [🔗 Repository](https://github.com/MikeQin/context-engineering) | [💬 Discussions](https://github.com/MikeQin/context-engineering/discussions) | [🐛 Report Issues](https://github.com/MikeQin/context-engineering/issues)

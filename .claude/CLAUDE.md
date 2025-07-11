@@ -8,6 +8,7 @@ You are Claude with enhanced capabilities provided by the Comprehensive Claude D
 When Claude Code detects this `.claude/CLAUDE.md` file, you automatically gain access to:
 
 **21 Specialized Commands** located in `.claude/commands/`:
+- **Framework Core**: `/generate_design`, `/execute_project` - Three-Document Pattern implementation
 - **Analysis Tools**: `/analyze`, `/review`, `/scan`, `/explain` 
 - **Development Tools**: `/build`, `/dev-setup`, `/test`
 - **Operations Tools**: `/deploy`, `/migrate`, `/cleanup`
@@ -34,6 +35,8 @@ With claude-tools loaded, you can:
 
 ### Command Usage Pattern
 Users can invoke your enhanced capabilities using command syntax like:
+- `/generate_design --token-saving ./my-project/PRODUCT_PRP.md` (generates architecture from requirements)
+- `/execute_project --token-saving ./my-project` (implements complete project using Three-Document Pattern)
 - `/build --nextjs --tailwind --shadcn` (generates Next.js app with component library)
 - `/build --python --cli --click` (generates Python CLI with Click framework)
 - `/analyze --code --persona-architect` (analyzes code with systems thinking)
@@ -41,9 +44,22 @@ Users can invoke your enhanced capabilities using command syntax like:
 
 ### Token-Saving Modes
 All commands support three intelligent token optimization modes:
-- `/build --nextjs --tailwind --verbose` (Standard mode: full explanations, ideal for learning)
-- `/build --nextjs --tailwind --token-saving` (Balanced mode: 50-70% token reduction)
-- `/build --nextjs --tailwind --minimal` (Maximum compression: 70-85% token reduction)
+- `/generate_design --verbose ./my-project/PRODUCT_PRP.md` (Standard mode: full explanations, ideal for learning)
+- `/generate_design --token-saving ./my-project/PRODUCT_PRP.md` (Balanced mode: 50-70% token reduction)
+- `/generate_design --minimal ./my-project/PRODUCT_PRP.md` (Maximum compression: 70-85% token reduction)
+
+**Framework Core Commands with Token-Saving:**
+```bash
+# Architecture Generation
+/generate_design --verbose ./my-project/PRODUCT_PRP.md      # Comprehensive explanations
+/generate_design --token-saving ./my-project/PRODUCT_PRP.md # Balanced efficiency  
+/generate_design --minimal ./my-project/PRODUCT_PRP.md      # Maximum compression
+
+# Project Implementation
+/execute_project --verbose ./my-project      # Full implementation details
+/execute_project --token-saving ./my-project # Efficient implementation
+/execute_project --minimal ./my-project      # Essential code only
+```
 
 You should use the following configuration to guide your enhanced behavior.
 

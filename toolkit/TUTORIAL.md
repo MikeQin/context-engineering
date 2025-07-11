@@ -2,7 +2,7 @@
 
 ## 🚀 Quick Start Guide
 
-Toolkit provides **19 specialized commands** that transform Claude Code into a powerful development framework. Each command includes **universal flags**, **cognitive personas**, and **MCP integration**.
+Toolkit provides **21 specialized commands** that transform Claude Code into a powerful development framework. Each command includes **universal flags**, **cognitive personas**, and **MCP integration**.
 
 ### Basic Syntax
 ```bash
@@ -91,6 +91,16 @@ mindmap
         API Design
         Database Design
         DDD Patterns
+      /generate_design
+        Three-Document Pattern
+        Architecture Generation
+        Token-Saving Modes
+        Framework Integration
+      /execute_project
+        Complete Implementation
+        Production-Ready Code
+        Three-Document Workflow
+        Token-Optimized Execution
       /document
         API Documentation
         User Guides
@@ -123,7 +133,7 @@ mindmap
 
 ```mermaid
 graph LR
-    subgraph "Universal Features Available on ALL 19 Commands"
+    subgraph "Universal Features Available on ALL 21 Commands"
         direction TB
         
         subgraph "Thinking Modes"
@@ -154,8 +164,11 @@ graph LR
         end
         
         subgraph "Token Optimization"
-            O1["--uc<br/>UltraCompressed mode<br/>Significant reduction"]
-            O2["--plan<br/>Show execution plan<br/>Preview actions"]
+            O1["--verbose<br/>Full explanations<br/>Comprehensive mode (default)"]
+            O2["--token-saving<br/>50-70% reduction<br/>Balanced efficiency"]
+            O3["--minimal<br/>70-85% reduction<br/>Optimized communication"]
+            O4["--uc<br/>UltraCompressed mode<br/>Alias for --minimal"]
+            O5["--plan<br/>Show execution plan<br/>Preview actions"]
         end
     end
     
@@ -167,7 +180,7 @@ graph LR
     class T1,T2,T3 thinkingBox
     class P1,P2,P3,P4,P5,P6,P7,P8,P9 personaBox
     class M1,M2,M3,M4,M5,M6 mcpBox
-    class O1,O2 optimizeBox
+    class O1,O2,O3,O4,O5 optimizeBox
 ```
 
 ### 🎯 Development Workflow Visualization
@@ -644,6 +657,80 @@ graph TD
 - `--resources` → Resource planning
 - `--timeline` → Timeline estimation
 - `--risk` → Risk assessment
+
+#### `/generate_design` - Three-Document Pattern Architecture Generation
+**Purpose**: Generate comprehensive DESIGN.md from PRODUCT_PRP.md using Context Engineering Framework
+
+```bash
+# Standard mode (comprehensive explanations)
+/generate_design --verbose ./my-project/PRODUCT_PRP.md
+
+# Token-saving mode (50-70% reduction)
+/generate_design --token-saving ./my-project/PRODUCT_PRP.md
+
+# Minimal mode (70-85% reduction)
+/generate_design --minimal ./my-project/PRODUCT_PRP.md
+
+# With cognitive personas
+/generate_design --persona-architect ./my-project/PRODUCT_PRP.md
+/generate_design --persona-frontend ./my-project/PRODUCT_PRP_SLIM.md
+```
+
+**Token-Saving Modes**:
+- `--verbose` → Full explanations and comprehensive documentation (default)
+- `--token-saving` → Balanced efficiency with quality maintenance  
+- `--minimal` → Maximum compression with optimized communication patterns
+- `--uc` → UltraCompressed mode alias
+
+**Framework Features**:
+- Extracts product name from PRP for consistent file naming
+- Reads project's CLAUDE.md methodology for standards
+- Creates [PRODUCT_NAME]_DESIGN.md with complete architecture
+- Supports enterprise, slim, and CLI templates
+- Includes technical diagrams and implementation planning
+
+#### `/execute_project` - Complete Project Implementation
+**Purpose**: Execute complete project implementation using all three framework documents
+
+```bash
+# Standard mode (full implementation with explanations)
+/execute_project --verbose ./my-project
+
+# Token-saving mode (efficient implementation)
+/execute_project --token-saving ./my-project
+
+# Minimal mode (essential code only)
+/execute_project --minimal ./my-project
+
+# Specialized implementation approaches
+/execute_project --persona-frontend ./my-web-app     # UI-focused
+/execute_project --persona-backend ./my-api         # Server-focused
+/execute_project --persona-security ./my-enterprise # Security-first
+```
+
+**Token-Saving Modes**:
+- `--verbose` → Detailed implementation with comprehensive explanations
+- `--token-saving` → Essential code with minimal comments (50-70% reduction)
+- `--minimal` → Core functionality only with optimized progress reporting (70-85% reduction)
+
+**Implementation Features**:
+- Validates complete three-document pattern exists
+- Reads PRODUCT_PRP.md + [PRODUCT_NAME]_DESIGN.md + CLAUDE.md
+- Creates production-ready implementation following all specifications
+- Includes comprehensive testing and documentation
+- Supports Next.js, Python CLI, and backend architectures
+
+**Framework Workflow**:
+```bash
+# Complete Three-Document Pattern workflow
+mkdir my-project && cd my-project
+cp ../framework/* .
+# Edit PRODUCT_PRP.md with requirements
+/generate_design --token-saving ./PRODUCT_PRP.md
+# Review generated DESIGN.md
+/execute_project --token-saving ./
+# Deploy production-ready code
+```
 
 ---
 

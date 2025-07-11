@@ -9,9 +9,9 @@ This is **The Three-Document Pattern Context Engineering Framework** - a systema
 ## Repository Architecture
 
 ### Core Components
-- **`.claude/`** - Internal toolkit (19 commands, templates, configuration) - **Framework Core**
+- **`.claude/`** - Internal toolkit (21 commands, templates, configuration) - **Framework Core**
 - **`framework/`** - User-facing templates and methodology - **User Interface**  
-- **`examples/`** - Real-world usage demonstration (Tetris game) - **Validation**
+- **`example/`** - Real-world usage demonstration (Tetris game) - **Validation**
 - **`docs/`** - Design decisions, methodology articles, and token-saving guides - **Documentation**
 - **`toolkit/`** - Internal toolkit documentation - **Internal Docs**
 - **`install.sh`** - MCP server installer (optional) - **Distribution**
@@ -132,7 +132,7 @@ This is **The Three-Document Pattern Context Engineering Framework** - a systema
 ### Documentation Enhancements
 - **README.md**: Added comprehensive token-saving section with best practices
 - **docs/DESIGN_DECISIONS.md**: Decision #002 documenting token-saving architecture
-- **docs/SYMBOL_SYSTEM_TRAINING.md**: Complete training guide for symbol-based communication
+- **toolkit/SYMBOL_SYSTEM_TRAINING.md**: Internal training guide for framework optimization
 - **docs/MODE_SELECTION_AUTOMATION.md**: Intelligent mode selection recommendations
 - **docs/TEAM_ADOPTION_STRATEGY.md**: Systematic team and enterprise adoption guide
 - **toolkit/README.md**: Updated with smart token-saving modes section
@@ -142,6 +142,25 @@ This is **The Three-Document Pattern Context Engineering Framework** - a systema
 - **execute_project.md**: Added universal flag inheritance
 - **generate_design.md**: Added universal flag inheritance
 - **Quality Validation**: Verified token-saving implementation across all framework components
+
+### Framework Core Commands Usage Examples
+```bash
+# Standard Development Workflow (comprehensive explanations)
+/generate_design --verbose ./my-project/PRODUCT_PRP.md
+/execute_project --verbose ./my-project
+
+# Production Development Workflow (50-70% token reduction)  
+/generate_design --token-saving ./my-project/PRODUCT_PRP.md
+/execute_project --token-saving ./my-project
+
+# Expert Development Workflow (70-85% token reduction)
+/generate_design --minimal ./my-project/PRODUCT_PRP.md
+/execute_project --minimal ./my-project
+
+# Framework Testing and Validation
+/generate_design --token-saving ./example/TETRIS_PRP.md
+/execute_project --token-saving ./example
+```
 
 ---
 

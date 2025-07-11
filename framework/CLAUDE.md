@@ -22,10 +22,24 @@ The Context Engineering Framework includes intelligent token optimization for ef
 
 ### **Usage Examples**
 ```bash
-# Framework commands with mode selection
-/generate_design --token-saving ./PRODUCT_PRP.md
-/execute_project --verbose ./my-project
-/build --nextjs --tailwind --minimal
+# Framework Core Commands with Token-Saving Modes
+/generate_design --verbose ./PRODUCT_PRP.md      # Comprehensive explanations
+/generate_design --token-saving ./PRODUCT_PRP.md # Balanced efficiency
+/generate_design --minimal ./PRODUCT_PRP.md      # Maximum compression
+
+/execute_project --verbose ./my-project      # Full implementation details
+/execute_project --token-saving ./my-project # Efficient implementation
+/execute_project --minimal ./my-project      # Essential code only
+
+# Complete Three-Document Pattern Workflow
+/generate_design --token-saving ./PRODUCT_PRP.md  # Generate architecture
+# Review and approve generated DESIGN.md
+/execute_project --token-saving ./                # Implement project
+
+# Other toolkit commands with token-saving
+/build --nextjs --tailwind --token-saving
+/analyze --code --performance --minimal
+/review --security --pull-request --verbose
 ```
 
 ### 🔄 Project Awareness & Context

@@ -123,6 +123,17 @@
 ### `/generate_design`
 **Purpose**: Automated architecture generation from requirements (Framework Core)  
 **Usage**: `/generate_design ./PRODUCT_PRP.md`  
+**Token-Saving Examples**:
+```bash
+# Standard mode (comprehensive explanations)
+/generate_design --verbose ./my-project/PRODUCT_PRP.md
+
+# Production mode (50-70% token reduction)
+/generate_design --token-saving ./my-project/PRODUCT_PRP.md
+
+# Expert mode (70-85% token reduction)
+/generate_design --minimal ./my-project/PRODUCT_PRP.md
+```
 **Key Features**: Three-Document Pattern implementation, automated DESIGN.md generation, requirements-to-architecture conversion, framework methodology enforcement  
 **Best For**: **Core framework workflow**, converting PRODUCT_PRP.md to DESIGN.md, systematic architecture generation  
 **Framework Significance**: **Essential component of Three-Document Pattern** - bridges requirements and implementation
@@ -130,6 +141,17 @@
 ### `/execute_project`
 **Purpose**: Complete project execution using Three-Document Pattern (Framework Core)  
 **Usage**: `/execute_project ./my-project`  
+**Token-Saving Examples**:
+```bash
+# Standard mode (full implementation with explanations)
+/execute_project --verbose ./my-project
+
+# Production mode (efficient implementation)
+/execute_project --token-saving ./my-project
+
+# Expert mode (essential code only)
+/execute_project --minimal ./my-project
+```
 **Key Features**: **End-to-end framework implementation**, Three-Document Pattern orchestration, complete project realization, methodology demonstration  
 **Best For**: **Complete framework workflow execution**, systematic development following Context Engineering principles  
 **Framework Significance**: **The ultimate framework command** - executes entire methodology from requirements through deployment

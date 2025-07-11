@@ -4,6 +4,9 @@
 
 *A revolutionary framework that transforms AI-assisted development from unreliable experimentation into predictable, professional delivery*
 
+**Author**: Mike Qin  
+**Date**: July 11, 2025
+
 ---
 
 ### The $10 Million Problem Nobody Talks About
@@ -66,7 +69,7 @@ To prove this framework works, we built a complete production application: a mod
 
 ### The Framework in Action: Two Commands to Production
 
-We've distilled this methodology into two simple commands:
+We've distilled this methodology into two simple commands with intelligent token optimization:
 
 ```bash
 # 1. Generate your technical architecture
@@ -76,7 +79,22 @@ We've distilled this methodology into two simple commands:
 /execute_project ./your-project
 ```
 
-That's it. Two commands transform your requirements into a working, production-ready application.
+**Smart Token-Saving Options:**
+```bash
+# Learning Phase (comprehensive explanations)
+/generate_design --verbose ./your-project/PRODUCT_PRP.md
+/execute_project --verbose ./your-project
+
+# Production Phase (50-70% token reduction)
+/generate_design --token-saving ./your-project/PRODUCT_PRP.md
+/execute_project --token-saving ./your-project
+
+# Expert Phase (70-85% token reduction)
+/generate_design --minimal ./your-project/PRODUCT_PRP.md
+/execute_project --minimal ./your-project
+```
+
+That's it. Two commands with three optimization levels transform your requirements into a working, production-ready application while managing costs intelligently.
 
 ### Real-World Impact: What Teams Are Experiencing
 
@@ -93,7 +111,7 @@ Early adopters report remarkable results:
 
 This isn't just about faster coding. It's about **predictable AI outcomes** in an unpredictable world.
 
-As AI becomes central to business operations, organizations need frameworks that deliver consistent results. The Three-Document Pattern provides that foundation—not just for development, but as a model for systematic AI implementation across any domain.
+As AI becomes central to business operations, organizations need frameworks that deliver consistent results. The **Three-Document Pattern** provides that foundation—not just for development, but as _a model for systematic AI implementation across any domain_.
 
 ### The Business Case: ROI That Actually Materializes
 
@@ -132,12 +150,14 @@ chmod +x install.sh && ./install.sh
 **Phase 2: Create Your First Project (30 minutes)**
 ```bash
 # Set up your project
-mkdir my-awesome-app && cd my-awesome-app
-cp ../framework/* .
+mkdir my-awesome-app
+cp ./framework/* ./my-awesome-app
 
 # Customize your requirements
 # For web apps: edit PRODUCT_PRP.md or PRODUCT_PRP_SLIM.md
 # For CLI tools: edit PRODUCT_PRP_CLI.md (Python Click/Typer support)
+# Fill out your chosen template with requirements
+# $ nano ./my-awesome-app/PRODUCT_PRP.md
 # Generate your architecture
 /generate_design ./my-awesome-app/PRODUCT_PRP.md
 ```

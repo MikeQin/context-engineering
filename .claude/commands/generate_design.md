@@ -19,14 +19,14 @@ Generate a comprehensive DESIGN.md document from a PRODUCT_PRP.md file following
 ## Options
 
 - `--token-saving` or `--uc`: Enable UltraCompressed mode for 70% token reduction
-- `--minimal`: Maximum compression with symbol-based communication
+- `--minimal`: Maximum compression with optimized communication patterns
 - `--verbose`: Detailed output with explanations (default)
 
 ## Token-Saving Mode
 
 When `--token-saving` is used, the command generates:
 - Concise technical architecture (vs. comprehensive)
-- Symbol-based structure notation  
+- Optimized structure notation  
 - Essential information only
 - Compressed mermaid diagrams
 - Optimized for implementation efficiency

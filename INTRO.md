@@ -45,7 +45,12 @@ This represents the evolution from prompt engineering to systematic AI developme
 
 **One-Command Architecture Generation:**
 ```bash
-/generate_design
+# Standard mode (comprehensive)
+/generate_design ./my-project/PRODUCT_PRP.md
+
+# Token-saving options
+/generate_design --token-saving ./my-project/PRODUCT_PRP.md # 50-70% reduction
+/generate_design --minimal ./my-project/PRODUCT_PRP.md      # 70-85% reduction
 ```
 
 ---
@@ -97,7 +102,7 @@ This represents the evolution from prompt engineering to systematic AI developme
 ### Smart Cost Management
 The framework includes three intelligent modes that adapt to team expertise and project needs:
 
-**🎯 Standard Mode (--verbose)**
+**🎯 Standard (Default) Mode (--verbose)**
 - Full explanations and comprehensive documentation
 - Perfect for learning, onboarding, and complex analysis
 - 100% token usage (baseline) for maximum clarity
@@ -109,20 +114,23 @@ The framework includes three intelligent modes that adapt to team expertise and 
 
 **🚀 Minimal Mode (--minimal)**
 - Maximum compression with 70-85% token reduction
-- Symbol-based communication for expert teams
+- Optimized communication for expert teams
 - Perfect for high-frequency operations and rapid iteration
 
 ### Progressive Adoption Strategy
 Teams naturally evolve through the optimization levels:
 ```bash
 # Phase 1: Learning & Initial Production
-/build --nextjs --tailwind --verbose
+/generate_design --verbose ./my-project/PRODUCT_PRP.md
+/execute_project --verbose ./my-project
 
 # Phase 2: Experienced Production Development
-/build --nextjs --tailwind --token-saving
+/generate_design --token-saving ./my-project/PRODUCT_PRP.md
+/execute_project --token-saving ./my-project
 
 # Phase 3: Expert Operations
-/build --nextjs --tailwind --minimal
+/generate_design --minimal ./my-project/PRODUCT_PRP.md
+/execute_project --minimal ./my-project
 ```
 
 **Business Impact**: Organizations typically see 50-85% reduction in AI assistance costs while maintaining or improving code quality and development velocity.
@@ -222,16 +230,22 @@ Teams naturally evolve through the optimization levels:
 ├── PRODUCT_PRP_CLI.md (CLI application template)
 ├── CLAUDE.md (Development methodology)
 ├── install.sh (MCP server installer - optional)
-├── generate_design command (Architecture generator)
+├── /generate_design command (Architecture generator)
+├── /execute_project command (Product implementation)
 └── Complete Tetris example with source code
 ```
 
 **Quick Start (5 minutes):**
-1. Choose template based on project complexity
-2. Install MCP servers: `./install.sh` (optional)
-3. Fill requirements in chosen template
-4. Generate architecture: `/generate_design`
-5. Begin systematic implementation
+1. Install MCP servers: `./install.sh` (optional) in terminal
+2. Create project folder: `mkdir my-project`
+3. Copy templates: `cp ./framework/* ./my-project`
+4. Enter `claude` code mode
+5. Choose `./my-project/PRODUCT_PRP.md` template based on project complexity
+6. Fill requirements in chosen `./my-project/PRODUCT_PRP.md` template
+7. Generate architecture: `/generate_design --token-saving ./my-project/PRODUCT_PRP.md`
+8. Execute implementation: `/execute_project --token-saving ./my-project`
+9. Begin systematic implementation
+10. Validate and test the product
 
 ### Framework Resources
 - **Complete Documentation** - Comprehensive guides and best practices
@@ -275,6 +289,7 @@ Transform software development from art to engineering science through systemati
 ✅ Improved team productivity  
 ✅ Predictable project outcomes  
 ✅ Professional AI development standards  
+✅ Dramatic cost saving
 
 ---
 

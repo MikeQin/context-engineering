@@ -124,7 +124,7 @@ claude mcp add puppeteer npx @modelcontextprotocol/server-puppeteer
 
 **🚀 Minimal Mode (--minimal)**
 - **Usage**: Rapid prototyping, token budget constraints, high-frequency operations
-- **Token Reduction**: 70-85% using symbol-based communication
+- **Token Reduction**: 70-85% using optimized communication patterns
 - **Best For**: Expert developers, large codebases, rapid iteration cycles
 
 **Progressive Adoption Strategy:**
