@@ -144,11 +144,12 @@ cp ../framework/* .
 ### Step 5: **Install MCP Servers (Optional but Recommended)**
 ```bash
 # Install MCP servers for enhanced framework capabilities
-chmod +x install.sh
 ./install.sh
 ```
 
 This installs MCP servers for enhanced capabilities. **Framework commands are automatically available** - no copying required!
+
+**Note:** Claude Code runs on Linux/macOS/WSL environments, so the installer is designed for these platforms.
 
 **Note:** MCP integration provides access to advanced features like library documentation (Context7), multi-step reasoning (Sequential), and browser automation (Puppeteer). `Commands` work immediately after cloning the repository and installing MCP servers.
 
@@ -326,7 +327,7 @@ context-engineering/                 # Clone this repository
    - **Complex Projects**: Use [`framework/PRODUCT_PRP.md`](./framework/PRODUCT_PRP.md) for enterprise requirements
    - **CLI Applications**: Use [`framework/PRODUCT_PRP_CLI.md`](./framework/PRODUCT_PRP_CLI.md) for command-line tools
 3. **See It In Action**: Review [`examples/web-app/TETRIS_PRP.md`](./examples/web-app/TETRIS_PRP.md) as a working example
-4. **Install MCP Servers**: Run [`install.sh`](./install.sh) for enhanced capabilities (optional)
+4. **Install MCP Servers**: Run `./install.sh` for enhanced capabilities (optional)
 5. **Set Standards**: Use [`framework/CLAUDE.md`](./framework/CLAUDE.md) for development methodology
 6. **Practice**: Apply the framework to your own projects
 

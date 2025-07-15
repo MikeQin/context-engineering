@@ -23,7 +23,9 @@
       "WebFetch(domain:docs.anthropic.com)",
       "Bash(python -m pip install:*)",
       "Bash(python:*)",
-      "Bash(pytest:*)"
+      "Bash(pytest:*)",
+      "Bash(./install.sh)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
